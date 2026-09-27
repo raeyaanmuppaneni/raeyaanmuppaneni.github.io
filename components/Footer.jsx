@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-t from-slate-900 to-slate-800 dark:from-slate-950 dark:to-slate-900 text-white mt-24 py-16">
+    <footer className="bg-gradient-to-t from-[#2b2620] to-[#3d362c] text-white mt-24 py-16">
       <div className="container-custom">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
@@ -32,7 +32,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://github.com/raeyaan" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
+                <a href="https://github.com/raeyaanmuppaneni" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
                   GitHub
                 </a>
               </li>

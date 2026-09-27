@@ -8,8 +8,8 @@ export default function EngineeringArt() {
     >
       <defs>
         <linearGradient id="engineeringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#2563eb" />
-          <stop offset="100%" stopColor="#0891b2" />
+          <stop offset="0%" stopColor="#8c1515" />
+          <stop offset="100%" stopColor="#c9a876" />
         </linearGradient>
         <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
           <feDropShadow dx="0" dy="4" stdDeviation="6" floodOpacity="0.2"/>
@@ -26,10 +26,10 @@ export default function EngineeringArt() {
             fill="none" stroke="url(#engineeringGrad)" strokeWidth="2" filter="url(#shadow)"/>
 
       {/* Connecting circuit paths */}
-      <path d="M 200 80 Q 220 100 240 120" fill="none" stroke="#2563eb" strokeWidth="1.5" opacity="0.6"/>
-      <path d="M 200 80 Q 180 100 160 120" fill="none" stroke="#0891b2" strokeWidth="1.5" opacity="0.6"/>
-      <path d="M 280 200 Q 300 180 320 160" fill="none" stroke="#2563eb" strokeWidth="1.5" opacity="0.6"/>
-      <path d="M 120 200 Q 100 180 80 160" fill="none" stroke="#0891b2" strokeWidth="1.5" opacity="0.6"/>
+      <path d="M 200 80 Q 220 100 240 120" fill="none" stroke="#8c1515" strokeWidth="1.5" opacity="0.6"/>
+      <path d="M 200 80 Q 180 100 160 120" fill="none" stroke="#c9a876" strokeWidth="1.5" opacity="0.6"/>
+      <path d="M 280 200 Q 300 180 320 160" fill="none" stroke="#8c1515" strokeWidth="1.5" opacity="0.6"/>
+      <path d="M 120 200 Q 100 180 80 160" fill="none" stroke="#c9a876" strokeWidth="1.5" opacity="0.6"/>
 
       {/* Central core - represent innovation/processor */}
       <circle cx="200" cy="160" r="30" fill="url(#engineeringGrad)" opacity="0.3"/>
@@ -37,18 +37,18 @@ export default function EngineeringArt() {
       <circle cx="200" cy="160" r="8" fill="url(#engineeringGrad)"/>
 
       {/* Nodes - represent ideas/connections */}
-      <circle cx="160" cy="140" r="4" fill="#2563eb"/>
-      <circle cx="240" cy="140" r="4" fill="#0891b2"/>
+      <circle cx="160" cy="140" r="4" fill="#8c1515"/>
+      <circle cx="240" cy="140" r="4" fill="#c9a876"/>
       <circle cx="200" cy="100" r="4" fill="#f59e0b"/>
-      <circle cx="200" cy="220" r="4" fill="#10b981"/>
-      <circle cx="140" cy="180" r="3" fill="#2563eb" opacity="0.7"/>
-      <circle cx="260" cy="180" r="3" fill="#0891b2" opacity="0.7"/>
+      <circle cx="200" cy="220" r="4" fill="#6b7c52"/>
+      <circle cx="140" cy="180" r="3" fill="#8c1515" opacity="0.7"/>
+      <circle cx="260" cy="180" r="3" fill="#c9a876" opacity="0.7"/>
 
       {/* Connection lines between nodes */}
-      <line x1="200" y1="160" x2="160" y2="140" stroke="#2563eb" strokeWidth="1" opacity="0.4"/>
-      <line x1="200" y1="160" x2="240" y2="140" stroke="#0891b2" strokeWidth="1" opacity="0.4"/>
+      <line x1="200" y1="160" x2="160" y2="140" stroke="#8c1515" strokeWidth="1" opacity="0.4"/>
+      <line x1="200" y1="160" x2="240" y2="140" stroke="#c9a876" strokeWidth="1" opacity="0.4"/>
       <line x1="200" y1="160" x2="200" y2="100" stroke="#f59e0b" strokeWidth="1" opacity="0.3"/>
-      <line x1="200" y1="160" x2="200" y2="220" stroke="#10b981" strokeWidth="1" opacity="0.3"/>
+      <line x1="200" y1="160" x2="200" y2="220" stroke="#6b7c52" strokeWidth="1" opacity="0.3"/>
 
       {/* Decorative wave patterns */}
       <path d="M 80 280 Q 100 290 120 280 T 160 280 T 200 280 T 240 280 T 280 280"

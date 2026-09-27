@@ -1,6 +1,10 @@
 'use client';
 
 import { useState } from 'react';
+import PageHero from '@/components/PageHero';
+
+const inputClass =
+  'w-full px-4 py-2.5 border border-[#e6dcc8] rounded-xl bg-[#fffdf8] text-[#2b2620] focus:outline-none focus:border-[#8c1515] focus:ring-2 focus:ring-[#8c1515]/10 transition';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -37,134 +41,133 @@ export default function Contact() {
   };
 
   return (
-    <div className="container-custom py-16 md:py-24">
-      <article className="max-w-2xl">
-        <h1 className="heading-lg mb-12">Get in Touch</h1>
+    <div className="bg-[#fbf7ef] min-h-screen">
+      <PageHero
+        eyebrow="Let's Talk"
+        title="Get in Touch"
+        subtitle="I'm always interested in hearing about new ideas, research opportunities, and collaborations. Reach out any way that's easiest."
+      />
 
-        <section className="mb-12">
-          <p className="text-lg text-[var(--muted)] mb-8">
-            I'm always interested in hearing about new ideas, research opportunities, and collaborations. Feel free to reach out through any of the channels below.
-          </p>
-
-          <div className="space-y-6 mb-12">
-            <div>
-              <h3 className="heading-sm mb-2">Email</h3>
+      <div className="container-custom py-16 md:py-20">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-5 gap-8">
+          {/* Contact info */}
+          <div className="md:col-span-2 space-y-4">
+            <div className="card">
+              <h3 className="heading-sm text-base mb-2" style={{ color: '#8c1515' }}>Email</h3>
               <a
                 href="mailto:raeyaanmuppaneni@gmail.com"
-                className="text-[var(--foreground)] hover:opacity-70 transition"
+                className="text-slate-700 hover:text-red-800 transition break-all"
               >
                 raeyaanmuppaneni@gmail.com
               </a>
             </div>
 
-            <div>
-              <h3 className="heading-sm mb-2">Social</h3>
-              <div className="flex gap-6">
+            <div className="card">
+              <h3 className="heading-sm text-base mb-3" style={{ color: '#a0522d' }}>Social</h3>
+              <div className="flex flex-col gap-2">
                 <a
-                  href="https://github.com/raeyaan"
+                  href="https://github.com/raeyaanmuppaneni"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[var(--foreground)] hover:opacity-70 transition"
+                  className="inline-flex items-center gap-2 text-slate-700 hover:text-red-800 transition"
                 >
-                  GitHub
+                  GitHub <span>→</span>
                 </a>
                 <a
                   href="https://linkedin.com/in/raeyaan"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[var(--foreground)] hover:opacity-70 transition"
+                  className="inline-flex items-center gap-2 text-slate-700 hover:text-red-800 transition"
                 >
-                  LinkedIn
+                  LinkedIn <span>→</span>
                 </a>
               </div>
             </div>
 
-            <div>
-              <h3 className="heading-sm mb-2">Location</h3>
-              <p className="text-[var(--muted)]">Fremont, California, USA</p>
+            <div className="card">
+              <h3 className="heading-sm text-base mb-2" style={{ color: '#6b7c52' }}>Location</h3>
+              <p className="text-slate-600">Fremont, California, USA</p>
             </div>
           </div>
-        </section>
 
-        <div className="border-t border-[var(--border)] pt-12">
-          <h2 className="heading-md mb-8">Send a Message</h2>
+          {/* Form */}
+          <div className="md:col-span-3 card">
+            <h2 className="heading-md mb-6">Send a Message</h2>
 
-          {submitted && (
-            <div className="p-4 bg-green-100 dark:bg-green-900 border border-green-300 dark:border-green-700 rounded mb-6 text-sm">
-              ✓ Message sent successfully! I'll get back to you soon.
-            </div>
-          )}
+            {submitted && (
+              <div className="p-4 bg-[#eef1e7] border border-[#c3cdab] rounded-xl mb-6 text-sm text-[#4a5636] font-medium">
+                Message sent successfully — I'll get back to you soon.
+              </div>
+            )}
 
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium mb-2">
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-2 border border-[var(--border)] rounded bg-[var(--background)] text-[var(--foreground)] focus:outline-none focus:border-[var(--foreground)] transition"
-              />
-            </div>
+            <form onSubmit={handleSubmit} className="space-y-5">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium mb-2 text-slate-700">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className={inputClass}
+                />
+              </div>
 
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium mb-2">
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-2 border border-[var(--border)] rounded bg-[var(--background)] text-[var(--foreground)] focus:outline-none focus:border-[var(--foreground)] transition"
-              />
-            </div>
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium mb-2 text-slate-700">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className={inputClass}
+                />
+              </div>
 
-            <div>
-              <label htmlFor="subject" className="block text-sm font-medium mb-2">
-                Subject
-              </label>
-              <input
-                type="text"
-                id="subject"
-                name="subject"
-                value={formData.subject}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-2 border border-[var(--border)] rounded bg-[var(--background)] text-[var(--foreground)] focus:outline-none focus:border-[var(--foreground)] transition"
-              />
-            </div>
+              <div>
+                <label htmlFor="subject" className="block text-sm font-medium mb-2 text-slate-700">
+                  Subject
+                </label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  required
+                  className={inputClass}
+                />
+              </div>
 
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium mb-2">
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                rows="6"
-                className="w-full px-4 py-2 border border-[var(--border)] rounded bg-[var(--background)] text-[var(--foreground)] focus:outline-none focus:border-[var(--foreground)] transition resize-none"
-              />
-            </div>
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium mb-2 text-slate-700">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  rows="6"
+                  className={`${inputClass} resize-none`}
+                />
+              </div>
 
-            <button
-              type="submit"
-              className="px-6 py-2 bg-[var(--foreground)] text-[var(--background)] rounded hover:opacity-90 transition font-medium"
-            >
-              Send Message
-            </button>
-          </form>
+              <button type="submit" className="btn-primary">
+                Send Message
+              </button>
+            </form>
+          </div>
         </div>
-      </article>
+      </div>
     </div>
   );
 }

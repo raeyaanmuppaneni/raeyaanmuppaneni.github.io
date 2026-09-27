@@ -2,12 +2,12 @@ export default function ProfileImage() {
   return (
     <div className="relative w-full max-w-sm mx-auto">
       {/* Decorative background elements */}
-      <div className="absolute -inset-4 bg-gradient-to-br from-blue-500 via-cyan-500 to-blue-500 rounded-3xl opacity-20 blur-2xl"></div>
+      <div className="absolute -inset-4 bg-gradient-to-br from-[#8c1515] to-[#c9a876] rounded-3xl opacity-15 blur-2xl"></div>
 
       {/* Main image container */}
-      <div className="relative rounded-2xl overflow-hidden border-4 border-gradient-to-r from-blue-500 to-cyan-500 bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-800 aspect-square">
+      <div className="relative rounded-2xl overflow-hidden border-4 border-[#8c1515] bg-gradient-to-br from-[#f0e9d8] to-[#e6dcc8] aspect-square">
         {/* Placeholder with pattern */}
-        <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-100 to-cyan-100 dark:from-blue-900 dark:to-cyan-900 relative overflow-hidden">
+        <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-amber-50 to-amber-50 relative overflow-hidden">
           {/* Decorative pattern */}
           <div className="absolute inset-0 opacity-10">
             <svg className="w-full h-full" viewBox="0 0 100 100" fill="none">
@@ -20,20 +20,20 @@ export default function ProfileImage() {
 
           {/* Image placeholder content */}
           <div className="relative text-center">
-            <div className="w-24 h-24 mx-auto mb-4 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-full flex items-center justify-center text-white">
+            <div className="w-24 h-24 mx-auto mb-4 bg-gradient-to-br from-amber-500 to-amber-400 rounded-full flex items-center justify-center text-white">
               <svg className="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
               </svg>
             </div>
-            <p className="text-sm font-semibold text-slate-600 dark:text-slate-300">Raeyaan's Photo</p>
-            <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">High-quality portrait coming soon</p>
+            <p className="text-sm font-semibold text-slate-600">Raeyaan's Photo</p>
+            <p className="text-xs text-slate-500 mt-1">High-quality portrait coming soon</p>
           </div>
         </div>
       </div>
 
       {/* Floating accent elements */}
-      <div className="absolute -top-3 -right-3 w-16 h-16 bg-blue-400 rounded-full opacity-20 blur-xl"></div>
-      <div className="absolute -bottom-2 -left-2 w-20 h-20 bg-cyan-400 rounded-full opacity-15 blur-xl"></div>
+      <div className="absolute -top-3 -right-3 w-16 h-16 bg-amber-500 rounded-full opacity-20 blur-xl"></div>
+      <div className="absolute -bottom-2 -left-2 w-20 h-20 bg-amber-400 rounded-full opacity-15 blur-xl"></div>
     </div>
   );
 }

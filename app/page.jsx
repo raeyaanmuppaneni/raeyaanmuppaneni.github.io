@@ -1,235 +1,316 @@
 'use client';
 
 import Link from 'next/link';
-import { useEffect, useRef } from 'react';
-import ProfileImage from '@/components/ProfileImage';
-import EngineeringArt from '@/components/EngineeringArt';
 import JourneyTimeline from '@/components/JourneyTimeline';
+import HeroPortrait from '@/components/HeroPortrait';
+import Reveal from '@/components/Reveal';
 
 export default function Home() {
-  const heroRef = useRef(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (heroRef.current) {
-        const scrollY = window.scrollY;
-        heroRef.current.style.transform = `translateY(${scrollY * 0.3}px)`;
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
-    <div className="min-h-screen bg-white dark:bg-slate-900">
+    <div className="min-h-screen bg-[#fbf7ef]">
       {/* ============ HERO SECTION ============ */}
-      <section className="relative min-h-screen pt-20 pb-32 overflow-hidden">
-        {/* Animated background gradient */}
+      <section className="relative pt-16 md:pt-20 overflow-hidden">
+        {/* Soft background gradient */}
         <div className="absolute inset-0 -z-10">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{animationDelay: '2s'}}></div>
+          <div className="absolute top-0 right-0 w-96 h-96 bg-amber-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#8c1515] rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
         </div>
 
         <div className="container-custom relative z-10">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-center pb-16">
             {/* Left: Content */}
-            <div className="space-y-8">
-              {/* Decorative subtitle */}
+            <div className="space-y-7">
+              {/* Trust badges row */}
+              <div className="flex items-center gap-3 flex-wrap">
+                <div className="flex items-center gap-1.5 bg-[#fffdf8] border border-[#e6dcc8] rounded-full px-3 py-1.5 shadow-sm">
+                  <span className="text-amber-600">★★★★★</span>
+                  <span className="text-xs font-bold text-[#2b2620]">4.71 GPA</span>
+                </div>
+                <div className="flex items-center gap-1.5 bg-[#fffdf8] border border-[#e6dcc8] rounded-full px-3 py-1.5 shadow-sm">
+                  <span className="text-xs font-bold text-[#8c1515]">Stanford SIMR</span>
+                </div>
+                <span className="text-xs uppercase tracking-wider text-[var(--muted)] hidden sm:inline">Class of 2027 · Fremont, CA</span>
+              </div>
+
               <div>
-                <p className="subtitle text-blue-600 dark:text-blue-400 mb-4">Welcome to my journey</p>
+                <p className="calligraphy text-3xl mb-2">Hey, I'm Raeyaan</p>
                 <h1 className="heading-display leading-tight mb-6">
-                  Engineering<br/>with Purpose
+                  I Build Things<br/>That Help People
                 </h1>
               </div>
 
               {/* Description */}
               <p className="prose text-lg">
-                I'm <span className="font-bold text-slate-900 dark:text-white">Raeyaan Muppaneni</span>, a high school engineer reimagining what's possible at the intersection of technology and human impact. From biomedical research at Stanford to assistive tech for accessibility, I build solutions that matter.
+                I'm a high schooler who can't stop taking things apart just to see how they work — then rebuilding them to actually help someone. Right now that means a smart insole for athletes at Stanford, a wearable that helps people sense what's around them, and a robotic arm controlled by muscle signals. Most of it started in my garage.
               </p>
 
-              {/* Stats */}
-              <div className="grid grid-cols-3 gap-6 pt-4">
-                <div>
-                  <div className="stat-number">5+</div>
-                  <p className="stat-label">Major Projects</p>
-                </div>
-                <div>
-                  <div className="stat-number">2x</div>
-                  <p className="stat-label">Award Winner</p>
-                </div>
-                <div>
-                  <div className="stat-number">∞</div>
-                  <p className="stat-label">Impact Focused</p>
-                </div>
-              </div>
-
               {/* CTA Buttons */}
-              <div className="flex gap-4 pt-4">
-                <Link href="/work" className="btn-primary">
-                  Explore My Work
-                </Link>
-                <Link href="/contact" className="btn-secondary">
+              <div className="flex gap-4 pt-2 flex-wrap">
+                <Link href="/contact" className="btn-primary inline-flex items-center gap-3">
+                  <span className="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center text-[0.65rem] font-bold">
+                    RM
+                  </span>
                   Let's Connect
+                </Link>
+                <Link href="/work" className="btn-secondary inline-flex items-center gap-2">
+                  See What I've Built <span>↓</span>
                 </Link>
               </div>
             </div>
 
-            {/* Right: Visual elements */}
-            <div ref={heroRef} className="relative h-full flex items-center justify-center">
-              <div className="relative w-full max-w-sm">
-                {/* Floating illustration */}
-                <div className="mb-8 floating">
-                  <EngineeringArt />
-                </div>
-              </div>
+            {/* Right: Portrait */}
+            <div className="relative flex items-end justify-center md:justify-end">
+              <HeroPortrait />
             </div>
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <svg className="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
+        {/* Recognized By strip */}
+        <div className="border-t border-[#e6dcc8] bg-[#f4ecda]/60 py-6">
+          <div className="container-custom flex items-center gap-8 flex-wrap justify-between">
+            <span className="text-xs uppercase tracking-widest text-[var(--muted)] font-semibold shrink-0">
+              Recognized By
+            </span>
+            <div className="flex gap-8 md:gap-12 flex-wrap items-center opacity-80">
+              <span className="font-serif font-bold text-[#3d362c]">Stanford University</span>
+              <span className="font-serif font-bold text-[#3d362c]">Synopsys Science Fair</span>
+              <span className="font-serif font-bold text-[#3d362c]">Conrad Challenge</span>
+              <span className="font-serif font-bold text-[#3d362c] hidden md:inline">Rooting Minds</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============ STANFORD BANNER ============ */}
+      <section className="relative h-64 md:h-80 overflow-hidden">
+        <img
+          src="/images/stanford/quad-sunset.jpg"
+          alt="Stanford University Main Quad at sunset"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#2b2620]/80 via-[#2b2620]/20 to-transparent"></div>
+        <div className="relative h-full container-custom flex items-end pb-8">
+          <p style={{ fontFamily: "'Caveat', cursive", fontWeight: 600 }} className="text-3xl md:text-4xl text-white/95">
+            This is where a lot of the magic happens
+          </p>
         </div>
       </section>
 
       {/* ============ PROFILE SECTION ============ */}
-      <section className="py-20 bg-gradient-to-b from-slate-50 to-white dark:from-slate-800 dark:to-slate-900">
+      <section className="py-20 bg-gradient-to-b from-[#f4ecda] to-[#fbf7ef]">
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <p className="subtitle text-blue-600 dark:text-blue-400 mb-4">Meet the Engineer</p>
-            <h2 className="heading-lg mb-4">Raeyaan Muppaneni</h2>
-            <p className="prose text-lg max-w-2xl mx-auto">
-              High school innovator. Stanford researcher. Community builder. Passionate about creating technology that solves real problems and improves lives.
-            </p>
-          </div>
+          <Reveal>
+            <div className="text-center mb-12">
+              <p className="subtitle text-red-800 mb-4">A Bit About Me</p>
+              <h2 className="heading-lg mb-4">Hi, I'm Raeyaan</h2>
+              <p className="prose text-lg max-w-2xl mx-auto">
+                High schooler. Stanford researcher. Genuinely bad at sitting still. I care about building tech that actually helps people — not just tech that looks impressive on paper.
+              </p>
+            </div>
+          </Reveal>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <ProfileImage />
-            </div>
-            <div className="space-y-8">
-              <div>
-                <h3 className="heading-md mb-4">The Story</h3>
-                <p className="prose mb-4">
-                  Since childhood, I've been fascinated by how things work. This curiosity evolved into a passion for engineering—not just for the sake of innovation, but to solve real problems that affect real people.
-                </p>
-                <p className="prose">
-                  Whether designing PCBs in the lab, processing biomedical signals, or building assistive technology for accessibility, I approach each project with the same philosophy: technical excellence combined with human-centered purpose.
-                </p>
+            <Reveal>
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-br from-[#8c1515]/20 via-[#c9a876]/20 to-transparent rounded-3xl blur-2xl"></div>
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-[#e6dcc8]">
+                  <img
+                    src="/images/profile/stanford-arch.jpg"
+                    alt="Raeyaan walking through the Memorial Church arch at Stanford University"
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
               </div>
+            </Reveal>
+            <Reveal delay={150}>
+              <div className="space-y-8">
+                <div>
+                  <h3 className="heading-md mb-4">How I Got Here</h3>
+                  <p className="prose mb-4">
+                    Ever since I was a kid, I've taken things apart just to see how they tick — remotes, fans, anything with a screw in it. That curiosity turned into something bigger: a habit of building things that solve real problems for real people, not just projects that look good on a poster.
+                  </p>
+                  <p className="prose">
+                    Whether I'm soldering a circuit board at 11pm, decoding muscle signals, or building a wearable for someone who's visually impaired, I care about one thing — does this actually help someone? If the answer's yes, I'm in.
+                  </p>
+                </div>
 
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  { label: 'GPA', value: '4.71' },
-                  { label: 'University', value: 'Stanford' },
-                  { label: 'Focus', value: 'Biotech' },
-                  { label: 'Mission', value: 'Impact' },
-                ].map((item, idx) => (
-                  <div key={idx} className="p-4 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 rounded-xl border border-blue-200 dark:border-blue-800">
-                    <p className="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">{item.label}</p>
-                    <p className="text-lg font-bold text-slate-900 dark:text-white mt-1">{item.value}</p>
-                  </div>
-                ))}
+                <div className="grid grid-cols-2 gap-4">
+                  {[
+                    { label: 'GPA', value: '4.71' },
+                    { label: 'University', value: 'Stanford' },
+                    { label: 'Focus', value: 'Biotech' },
+                    { label: 'Mission', value: 'Impact' },
+                  ].map((item, idx) => (
+                    <div key={idx} className="p-4 bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl border border-amber-200">
+                      <p className="text-xs font-semibold text-red-800 uppercase tracking-wider">{item.label}</p>
+                      <p className="text-lg font-bold text-slate-900 mt-1">{item.value}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
+            </Reveal>
           </div>
         </div>
       </section>
 
       {/* ============ JOURNEY SECTION ============ */}
-      <section className="py-24 bg-white dark:bg-slate-900">
+      <section className="py-24 bg-[#fbf7ef]">
         <div className="container-custom">
-          <div className="text-center mb-16">
-            <p className="subtitle text-blue-600 dark:text-blue-400 mb-4">The Timeline</p>
-            <h2 className="heading-lg mb-4">A Journey of Innovation</h2>
-            <p className="prose text-lg max-w-2xl mx-auto">
-              From curiosity to real-world impact. Here's how the journey has unfolded.
-            </p>
-          </div>
+          <Reveal>
+            <div className="text-center mb-16">
+              <p className="subtitle text-red-800 mb-4">The Timeline</p>
+              <h2 className="heading-lg mb-4">My Story So Far</h2>
+              <p className="prose text-lg max-w-2xl mx-auto">
+                From "curious kid with a screwdriver" to Stanford researcher — here's the short version of how I got here.
+              </p>
+            </div>
+          </Reveal>
 
           <JourneyTimeline />
         </div>
       </section>
 
-      {/* ============ FEATURED WORK SECTION ============ */}
-      <section className="py-24 bg-gradient-to-b from-slate-50 to-white dark:from-slate-800 dark:to-slate-900">
+      {/* ============ STANFORD RESEARCH SECTION ============ */}
+      <section className="py-24 bg-gradient-to-b from-[#fbf7ef] to-[#f3e6cd] overflow-hidden">
         <div className="container-custom">
-          <div className="text-center mb-16">
-            <p className="subtitle text-blue-600 dark:text-blue-400 mb-4">What I've Built</p>
-            <h2 className="heading-lg mb-4">Featured Projects</h2>
-            <p className="prose text-lg max-w-2xl mx-auto">
-              Engineering solutions that combine technical depth with real-world impact.
-            </p>
-          </div>
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            {/* Photography */}
+            <Reveal className="relative order-2 md:order-1">
+              <div className="absolute -inset-6 bg-gradient-to-br from-amber-300 via-orange-200 to-transparent rounded-3xl opacity-40 blur-2xl"></div>
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-amber-200/60">
+                <img
+                  src="/images/stanford/hoover-tower.jpg"
+                  alt="Hoover Tower and the Main Quad at Stanford University"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              {/* Small detail shot overlapping the corner */}
+              <div className="hidden md:block absolute -bottom-8 -right-8 w-40 h-32 rounded-xl overflow-hidden shadow-2xl border-4 border-[#fbf7ef]">
+                <img
+                  src="/images/stanford/colonnade.jpg"
+                  alt="Stanford Main Quad colonnade"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <p className="text-center text-xs text-slate-400 mt-3 italic">
+                Hoover Tower &amp; the Main Quad, Stanford University
+              </p>
+            </Reveal>
 
-          <div className="grid md:grid-cols-2 gap-8">
+            {/* Text */}
+            <Reveal delay={150} className="order-1 md:order-2 space-y-6">
+              <p className="calligraphy text-3xl">A dream taking shape</p>
+              <h2 className="heading-lg">My Summer at Stanford</h2>
+              <p className="prose text-lg">
+                This past year, I joined Stanford's Human Performance Lab through their <span className="font-bold text-slate-900">SIMR program</span> — basically, a summer research program for high schoolers who are a little too obsessed with science. My project: building a smart insole that senses how someone's foot moves and where the pressure goes as they walk or run.
+              </p>
+              <p className="prose">
+                The goal is to help para-athletes train and move more safely, using the same hardware and firmware skills I've been building since I started tinkering — circuit design, embedded code, and a lot of trial and error.
+              </p>
+              <div className="flex gap-3 flex-wrap pt-2">
+                <span className="badge">Stanford SIMR 2025–26</span>
+                <span className="text-xs px-4 py-2 rounded-full border border-amber-300 text-amber-700 font-semibold">
+                  Human Performance Lab
+                </span>
+              </div>
+              <Link href="/work" className="inline-flex items-center gap-2 font-semibold text-red-800 pt-2">
+                See the research in detail <span>→</span>
+              </Link>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* ============ FEATURED WORK SECTION ============ */}
+      <section className="py-24 bg-gradient-to-b from-[#f4ecda] to-[#fbf7ef]">
+        <div className="container-custom">
+          <Reveal>
+            <div className="text-center mb-16">
+              <p className="subtitle text-red-800 mb-4">What I've Built</p>
+              <h2 className="heading-lg mb-4">A Few Things I'm Proud Of</h2>
+              <p className="prose text-lg max-w-2xl mx-auto">
+                Every one of these started as "wait, what if..." — here's where that curiosity led.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="grid md:grid-cols-3 gap-6 auto-rows-fr">
             {[
               {
                 icon: '📊',
                 title: 'Capacitive Sensing Insole',
                 org: 'Stanford University',
-                desc: 'Biomedical device for gait analysis. PCB design, embedded firmware, real-time data.',
+                desc: "Built a smart insole at Stanford that reads pressure and gait in real time, to help para-athletes train more safely. I handled the hardware and firmware — all of it.",
                 tags: ['Bioengineering', 'PCB', 'Embedded'],
                 link: '/work',
+                size: 'big',
               },
               {
                 icon: '🤖',
                 title: 'EMG-Controlled Robotics',
-                org: '2nd Place - Science Fair',
-                desc: 'Signal processing system translating muscle signals to robotic movement.',
+                org: '2nd Place · Science Fair',
+                desc: "Trained a robotic arm to move using my own muscle signals — a first step toward more responsive prosthetics.",
                 tags: ['Signal Processing', 'Robotics'],
                 link: '/work',
+                size: 'small',
               },
               {
                 icon: '👁️',
                 title: 'Assistive Vision Wearable',
-                org: '2nd Place - Synopsys',
-                desc: 'YOLOv8 computer vision for obstacle detection. Real-time edge inference.',
+                org: '2nd Place · Synopsys',
+                desc: "A wearable that spots obstacles in real time, to help people with visual impairments get around safer.",
                 tags: ['Computer Vision', 'AI/ML'],
                 link: '/work',
+                size: 'small',
               },
               {
                 icon: '🌱',
                 title: 'Rooting Minds Initiative',
                 org: 'Co-Founder & President',
-                desc: 'Accessible technology platform for neurodivergent youth. Reached 100+ students.',
+                desc: "Co-founded a platform that's brought accessible technology to 100+ neurodivergent students so far.",
                 tags: ['Community', 'Leadership'],
                 link: '/activities',
+                size: 'big',
               },
             ].map((project, idx) => (
-              <Link key={idx} href={project.link}>
-                <div className="card group cursor-pointer h-full">
-                  <div className="flex items-start gap-4 mb-4">
-                    <span className="text-4xl">{project.icon}</span>
-                    <div>
-                      <h3 className="heading-sm">{project.title}</h3>
-                      <p className="text-sm text-blue-600 dark:text-blue-400 font-semibold">
+              <Reveal
+                key={idx}
+                delay={idx * 100}
+                className={project.size === 'big' ? 'md:col-span-2' : 'md:col-span-1'}
+              >
+                <Link href={project.link} className="block h-full">
+                  <div className={`card group cursor-pointer h-full flex flex-col ${project.size === 'big' ? 'md:flex-row md:items-center md:gap-8' : ''}`}>
+                    <div className={project.size === 'big' ? 'md:w-1/3 flex flex-col items-start' : ''}>
+                      <span className={`${project.size === 'big' ? 'text-6xl' : 'text-4xl'} group-hover:scale-110 transition-transform block mb-3`}>
+                        {project.icon}
+                      </span>
+                      <h3 className={project.size === 'big' ? 'heading-md' : 'heading-sm'}>{project.title}</h3>
+                      <p className="text-sm text-red-800 font-semibold mb-2">
                         {project.org}
                       </p>
                     </div>
-                  </div>
 
-                  <p className="prose mb-4 line-clamp-2">{project.desc}</p>
+                    <div className="flex-1">
+                      <p className={`prose mb-4 ${project.size === 'big' ? '' : 'line-clamp-2'}`}>{project.desc}</p>
 
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag, i) => (
-                      <span
-                        key={i}
-                        className="text-xs px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full font-medium"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                      <div className="flex flex-wrap gap-2">
+                        {project.tags.map((tag, i) => (
+                          <span
+                            key={i}
+                            className="text-xs px-3 py-1 bg-amber-100 text-red-900 rounded-full font-medium"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
 
-                  <div className="mt-4 flex items-center text-blue-600 dark:text-blue-400 font-semibold group-hover:gap-2 transition-all">
-                    Discover More <span className="ml-2">→</span>
+                      <div className="mt-4 flex items-center text-red-800 font-semibold group-hover:gap-2 transition-all">
+                        Discover More <span className="ml-2">→</span>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </Link>
+                </Link>
+              </Reveal>
             ))}
           </div>
 
@@ -242,80 +323,111 @@ export default function Home() {
       </section>
 
       {/* ============ EXPERTISE SECTION ============ */}
-      <section className="py-24 bg-white dark:bg-slate-900">
+      <section className="py-24 bg-[#fbf7ef]">
         <div className="container-custom">
-          <div className="text-center mb-16">
-            <p className="subtitle text-blue-600 dark:text-blue-400 mb-4">Technical Expertise</p>
-            <h2 className="heading-lg mb-4">What I Work With</h2>
-          </div>
+          <Reveal>
+            <div className="text-center mb-16">
+              <p className="subtitle text-red-800 mb-4">Tools I Reach For</p>
+              <h2 className="heading-lg mb-4">The Toolkit Behind the Projects</h2>
+            </div>
+          </Reveal>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-4 gap-6 auto-rows-fr">
             {[
               {
                 category: 'Electronics & PCB Design',
+                blurb: 'Designing the circuit boards that power everything I build.',
                 skills: ['KiCad', '4-Layer PCB Design', 'Circuit Design', 'Microcontrollers'],
                 icon: '⚡',
+                size: 'big',
               },
               {
                 category: 'Embedded Systems',
+                blurb: 'Writing the code that runs directly on hardware.',
                 skills: ['STM32 Firmware', 'C/C++', 'I2C/SPI/UART', 'Sensor Integration'],
                 icon: '🔧',
+                size: 'small',
               },
               {
                 category: 'Signal Processing',
+                blurb: 'Turning messy real-world signals into usable data.',
                 skills: ['EMG/EEG Analysis', 'Filtering', 'Python DSP', 'Data Acquisition'],
                 icon: '📈',
+                size: 'small',
               },
               {
                 category: 'Software & AI',
+                blurb: 'Building smart software that can see, sense, and decide.',
                 skills: ['Python', 'Computer Vision', 'YOLOv8', 'Machine Learning'],
                 icon: '🧠',
+                size: 'small',
               },
               {
                 category: 'Robotics & Mechanics',
+                blurb: 'Making things move the way they\'re actually supposed to.',
                 skills: ['Kinematics', 'Actuator Control', 'CAD Design', 'Prototyping'],
                 icon: '🤖',
+                size: 'small',
               },
               {
                 category: 'Mathematics',
+                blurb: 'The math that quietly makes everything above actually work.',
                 skills: ['Multivariable Calculus', 'Group Theory', 'Optimization', 'Applied Math'],
                 icon: '∑',
+                size: 'big',
               },
             ].map((item, idx) => (
-              <div key={idx} className="card text-center group">
-                <div className="text-4xl mb-4">{item.icon}</div>
-                <h3 className="heading-sm mb-4">{item.category}</h3>
-                <div className="space-y-2">
-                  {item.skills.map((skill, i) => (
-                    <p key={i} className="text-sm text-slate-600 dark:text-slate-300">
-                      {skill}
-                    </p>
-                  ))}
+              <Reveal
+                key={idx}
+                delay={idx * 80}
+                className={item.size === 'big' ? 'md:col-span-2' : 'md:col-span-1'}
+              >
+                <div className={`card group h-full ${item.size === 'big' ? 'text-left flex items-center gap-6' : 'text-center'}`}>
+                  <div className={`${item.size === 'big' ? 'text-6xl' : 'text-4xl mx-auto'} mb-4 group-hover:scale-110 transition-transform shrink-0`}>
+                    {item.icon}
+                  </div>
+                  <div>
+                    <h3 className={item.size === 'big' ? 'heading-md mb-2' : 'heading-sm mb-2'}>{item.category}</h3>
+                    <p className="text-xs text-[var(--muted)] italic mb-4">{item.blurb}</p>
+                    <div className={`space-y-1.5 ${item.size === 'big' ? 'flex flex-wrap gap-2 space-y-0' : ''}`}>
+                      {item.skills.map((skill, i) => (
+                        item.size === 'big' ? (
+                          <span key={i} className="text-xs px-3 py-1 bg-amber-100 text-red-900 rounded-full font-medium">
+                            {skill}
+                          </span>
+                        ) : (
+                          <p key={i} className="text-sm text-slate-600">
+                            {skill}
+                          </p>
+                        )
+                      ))}
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
       </section>
 
       {/* ============ CTA SECTION ============ */}
-      <section className="relative py-32 bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-700 dark:from-blue-900 dark:via-cyan-900 dark:to-blue-900 overflow-hidden">
+      <section className="relative py-32 bg-gradient-to-br from-[#7a1212] to-[#4a0d0d] overflow-hidden">
         {/* Decorative shapes */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-white opacity-5 rounded-full -mr-48 -mt-48"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-white opacity-5 rounded-full -ml-48 -mb-48"></div>
 
-        <div className="container-custom relative z-10 text-center text-white space-y-8">
-          <h2 className="heading-lg text-white mb-4">Let's Build Something Amazing</h2>
-          <p className="prose text-lg text-blue-100 max-w-2xl mx-auto">
-            Interested in collaboration, research opportunities, or learning more about my work? I'd love to connect and explore what we can create together.
+        <Reveal className="container-custom relative z-10 text-center text-white space-y-8">
+          <h2 className="heading-lg text-white mb-4">Got an Idea? Let's Build It</h2>
+          <p className="prose text-lg text-amber-100 max-w-2xl mx-auto">
+            Whether it's a research collaboration, a school project, or you just want to talk shop about PCBs — I'd love to hear from you.
           </p>
 
           <div className="flex gap-4 justify-center flex-wrap pt-4">
-            <button className="px-8 py-3 rounded-full bg-white text-blue-600 font-bold hover:bg-blue-50 transition-all transform hover:scale-105">
-              <Link href="/contact">Get In Touch</Link>
-            </button>
+            <Link href="/contact" className="px-8 py-3 rounded-full bg-white text-red-800 font-bold hover:bg-amber-50 transition-all transform hover:scale-105 inline-block">
+              Get In Touch
+            </Link>
             <a
-              href="https://github.com/raeyaan"
+              href="https://github.com/raeyaanmuppaneni"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3 rounded-full border-2 border-white text-white font-bold hover:bg-white/10 transition-all transform hover:scale-105"
@@ -323,7 +435,11 @@ export default function Home() {
               View GitHub
             </a>
           </div>
-        </div>
+
+          <p className="pt-6" style={{ fontFamily: "'Caveat', cursive", fontWeight: 600, fontSize: '1.75rem', color: 'rgba(255,255,255,0.9)' }}>
+            — Raeyaan Muppaneni
+          </p>
+        </Reveal>
       </section>
     </div>
   );
