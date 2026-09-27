@@ -198,7 +198,6 @@ export default function Home() {
 
             {/* Text */}
             <Reveal delay={150} className="order-1 md:order-2 space-y-6">
-              <p className="calligraphy text-3xl">A dream taking shape</p>
               <h2 className="heading-lg">My Summer at Stanford</h2>
               <p className="prose text-lg">
                 This past summer, my team and I started building a smart insole through Stanford's <span className="font-bold text-slate-900">SIMR program</span>, a summer research program for high school students. The insole measures foot pressure as someone walks or runs.
@@ -225,10 +224,8 @@ export default function Home() {
         <div className="container-custom">
           <Reveal>
             <div className="text-center mb-16">
-              <p className="subtitle text-red-800 mb-4">What I've Built</p>
-              <h2 className="heading-lg mb-4">A Few Things I'm Proud Of</h2>
+              <h2 className="heading-lg mb-4">What I've Built</h2>
               <p className="prose text-lg max-w-2xl mx-auto">
-                Every one of these started as "wait, what if..." — here's where that curiosity led.
               </p>
             </div>
           </Reveal>
@@ -238,17 +235,17 @@ export default function Home() {
               {
                 icon: '📊',
                 title: 'Capacitive Sensing Insole',
-                org: 'Stanford University',
-                desc: "Built a smart insole at Stanford that reads pressure and gait in real time, to help para-athletes train more safely. I handled the hardware and firmware — all of it.",
+                org: 'SIMR & Human Performance Lab at Stanford University',
+                desc: "Built a smart insole at Stanford that reads pressure and gait in real time, to help para-athletes train more safely. I handled the hardware and firmware.",
                 tags: ['Bioengineering', 'PCB', 'Embedded'],
                 link: '/work',
                 size: 'big',
               },
               {
                 icon: '🤖',
-                title: 'EMG-Controlled Robotics',
-                org: '2nd Place · Science Fair',
-                desc: "Trained a robotic arm to move using my own muscle signals — a first step toward more responsive prosthetics.",
+                title: 'EMG-Controlled Robotic Arm',
+                org: '2nd Place ·  Synopsis Science Fair',
+                desc: "Built a robotic arm controlled by my own muscle signals, a step toward more responsive prosthetics. Published in IEEE.",
                 tags: ['Signal Processing', 'Robotics'],
                 link: '/work',
                 size: 'small',
@@ -257,7 +254,7 @@ export default function Home() {
                 icon: '👁️',
                 title: 'Assistive Vision Wearable',
                 org: '2nd Place · Synopsys',
-                desc: "A wearable that spots obstacles in real time, to help people with visual impairments get around safer.",
+                desc: "A wearable that classifies obstacles in real time, to help people with visual impairments get around safer.",
                 tags: ['Computer Vision', 'AI/ML'],
                 link: '/work',
                 size: 'small',
@@ -266,7 +263,7 @@ export default function Home() {
                 icon: '🌱',
                 title: 'Rooting Minds Initiative',
                 org: 'Co-Founder & President',
-                desc: "Co-founded a platform that's brought accessible technology to 100+ neurodivergent students so far.",
+                desc: "Co-founded a nonprofit that works toward bringing accessible technology and learning games to neurodivergent students.",
                 tags: ['Community', 'Leadership'],
                 link: '/activities',
                 size: 'big',
