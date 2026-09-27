@@ -104,7 +104,7 @@ export default function Home() {
               <p className="subtitle text-red-800 mb-4">A Bit About Me</p>
               <h2 className="heading-lg mb-4">Hi, I'm Raeyaan</h2>
               <p className="prose text-lg max-w-2xl mx-auto">
-                High schooler. Stanford researcher. Genuinely bad at sitting still. I care about building tech that actually helps people — not just tech that looks impressive on paper.
+                Student at Irvington High and student researcher in Stanford's Human Performance Lab. I do most of my work hands-on: designing the boards, soldering them, writing the firmware, and testing them.
               </p>
             </div>
           </Reveal>
@@ -127,19 +127,18 @@ export default function Home() {
                 <div>
                   <h3 className="heading-md mb-4">How I Got Here</h3>
                   <p className="prose mb-4">
-                    Ever since I was a kid, I've taken things apart just to see how they tick — remotes, fans, anything with a screw in it. That curiosity turned into something bigger: a habit of building things that solve real problems for real people, not just projects that look good on a poster.
-                  </p>
+                    I got into engineering by taking apart remotes and fans to see what was inside. Now I build the insides myself: designing circuit boards, writing the firmware that runs them, and testing them with the people they're for.                  </p>
                   <p className="prose">
-                    Whether I'm soldering a circuit board at 11pm, decoding muscle signals, or building a wearable for someone who's visually impaired, I care about one thing — does this actually help someone? If the answer's yes, I'm in.
+                    My projects have ranged from a robotic arm controlled by muscle signals to a wearable that helps visually impaired people sense what's around them. The one I'm proudest of started with an interview: a blade runner told me even Stanford's lab equipment couldn't measure how she runs. My team is now building an insole that can.
                   </p>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">
                   {[
-                    { label: 'GPA', value: '4.71' },
-                    { label: 'University', value: 'Stanford' },
-                    { label: 'Focus', value: 'Biotech' },
-                    { label: 'Mission', value: 'Impact' },
+                    { label: 'Weighted GPA', value: '4.71' },
+                    { label: 'Dream School', value: 'Stanford' },
+                    { label: 'Focus', value: 'Biomedical Engineering' },
+                    { label: 'Mission', value: 'Closing gaps' },
                   ].map((item, idx) => (
                     <div key={idx} className="p-4 bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl border border-amber-200">
                       <p className="text-xs font-semibold text-red-800 uppercase tracking-wider">{item.label}</p>
@@ -161,7 +160,7 @@ export default function Home() {
               <p className="subtitle text-red-800 mb-4">The Timeline</p>
               <h2 className="heading-lg mb-4">My Story So Far</h2>
               <p className="prose text-lg max-w-2xl mx-auto">
-                From "curious kid with a screwdriver" to Stanford researcher — here's the short version of how I got here.
+                From "curious kid with a screwdriver" to high school researcher at Stanford Lab. Here's the short version of how I got here.
               </p>
             </div>
           </Reveal>
@@ -202,10 +201,10 @@ export default function Home() {
               <p className="calligraphy text-3xl">A dream taking shape</p>
               <h2 className="heading-lg">My Summer at Stanford</h2>
               <p className="prose text-lg">
-                This past year, I joined Stanford's Human Performance Lab through their <span className="font-bold text-slate-900">SIMR program</span> — basically, a summer research program for high schoolers who are a little too obsessed with science. My project: building a smart insole that senses how someone's foot moves and where the pressure goes as they walk or run.
+                This past summer, my team and I started building a smart insole through Stanford's <span className="font-bold text-slate-900">SIMR program</span>, a summer research program for high school students. The insole measures foot pressure as someone walks or runs.
               </p>
               <p className="prose">
-                The goal is to help para-athletes train and move more safely, using the same hardware and firmware skills I've been building since I started tinkering — circuit design, embedded code, and a lot of trial and error.
+                It began with an interview with a para-athlete, who told us even Stanford's lab equipment can't be used by blade runners. We built an insole with eight capacitive pressure sensors to fill that gap. After SIMR ended, my team and I continued the project under the mentorship of a PhD student in the Human Performance Lab. Since then, we've redesigned the circuit boards and got the full system running. Next is calibration and lab testing.
               </p>
               <div className="flex gap-3 flex-wrap pt-2">
                 <span className="badge">Stanford SIMR 2025–26</span>
