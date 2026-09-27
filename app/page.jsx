@@ -35,13 +35,13 @@ export default function Home() {
               <div>
                 <p className="calligraphy text-3xl mb-2">Hey, I'm Raeyaan</p>
                 <h1 className="heading-display leading-tight mb-6">
-                  I Build Things<br/>That Help People
+                  Hardware for the People<br/>Standard Tools Miss
                 </h1>
               </div>
 
               {/* Description */}
               <p className="prose text-lg">
-                I'm a high schooler who can't stop taking things apart just to see how they work — then rebuilding them to actually help someone. Right now that means a smart insole for athletes at Stanford, a wearable that helps people sense what's around them, and a robotic arm controlled by muscle signals. Most of it started in my garage.
+                I design hardware for people that standard tools leave out. Right now I lead a team at Stanford building a pressure-sensing insole for blade runners, whose gait can't be measured on the lab's instrumented treadmill. Before that, I built a robotic arm controlled by muscle signals (published in IEEE) and an object detection device for blind people.
               </p>
 
               {/* CTA Buttons */}
