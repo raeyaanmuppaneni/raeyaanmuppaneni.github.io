@@ -34,7 +34,7 @@ export default function Home() {
               <div>
                 <p className="calligraphy text-3xl mb-2">Hey, I'm Raeyaan</p>
                 <h1 className="heading-display leading-tight mb-6">
-                  Hardware for the People<br/>Standard Tools Miss
+                  The World Wasn't Built<br/>for Everyone. So I'm<br/>Building What It Left Out.
                 </h1>
               </div>
 
@@ -243,6 +243,7 @@ export default function Home() {
                 tags: ['Computer Vision', 'AI/ML'],
                 link: '/work',
                 size: 'small',
+                noHoverScale: true,
               },
               {
                 image: '/images/logos/rooting-minds.png',
@@ -263,11 +264,11 @@ export default function Home() {
                   <div className={`card group cursor-pointer h-full flex flex-col ${project.size === 'big' ? 'md:flex-row md:items-center md:gap-8' : ''}`}>
                     <div className={project.size === 'big' ? 'md:w-1/3 flex flex-col items-start' : ''}>
                       {project.image ? (
-                        <div className={`rounded-xl overflow-hidden border border-[#e6dcc8] mb-3 group-hover:scale-105 transition-transform ${project.size === 'big' ? 'w-full aspect-square' : 'w-16 h-16'}`}>
+                        <div className={`rounded-xl overflow-hidden border border-[#e6dcc8] mb-3 group-hover:scale-105 transition-transform ${project.size === 'big' ? 'w-full aspect-square' : 'w-full aspect-[3/2]'}`}>
                           <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
                         </div>
                       ) : (
-                        <span className={`${project.size === 'big' ? 'text-6xl' : 'text-4xl'} group-hover:scale-110 transition-transform block mb-3`}>
+                        <span className={`${project.size === 'big' ? 'text-6xl' : 'text-4xl'} ${project.noHoverScale ? '' : 'group-hover:scale-110'} transition-transform block mb-3`}>
                           {project.icon}
                         </span>
                       )}
