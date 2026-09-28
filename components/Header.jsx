@@ -114,23 +114,31 @@ export default function Header() {
           </svg>
         </button>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu — full-screen overlay so nothing shows through below it */}
         {mobileMenuOpen && (
-          <div id="mobile-menu" className="absolute top-full left-0 right-0 bg-[#fbf7ef] border-b border-[#e6dcc8] lg:hidden">
-            <div className="container-custom py-4 flex flex-col gap-3">
+          <div id="mobile-menu" className="fixed top-[68px] left-0 right-0 h-[calc(100vh-68px)] bg-[#fbf7ef] lg:hidden overflow-y-auto">
+            <div className="container-custom py-6 flex flex-col gap-1">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-sm font-medium text-slate-600 hover:text-red-800 py-2 transition-colors"
+                  className="text-lg font-medium text-slate-700 hover:text-red-800 py-3 border-b border-[#e6dcc8] transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.label}
                 </Link>
               ))}
+              <a
+                href="https://github.com/raeyaanmuppaneni"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-lg font-medium text-slate-700 hover:text-red-800 py-3 border-b border-[#e6dcc8] transition-colors"
+              >
+                GitHub
+              </a>
               <Link
                 href="/contact"
-                className="flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-[#8c1515] text-white font-semibold"
+                className="flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-[#8c1515] text-white font-semibold mt-6"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Let's Connect

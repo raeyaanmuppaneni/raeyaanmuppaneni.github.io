@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <footer className="bg-gradient-to-t from-[#2b2620] to-[#3d362c] text-white mt-24 py-16">
       <div className="container-custom">
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
+        <div className="grid md:grid-cols-3 gap-12 mb-12 text-center md:text-left">
           {/* Brand */}
           <div>
             <h3 className="text-lg font-bold mb-2">Raeyaan Muppaneni</h3>

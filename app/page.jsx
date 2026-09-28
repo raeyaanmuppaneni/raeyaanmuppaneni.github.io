@@ -34,7 +34,7 @@ export default function Home() {
               <div>
                 <p className="calligraphy text-3xl mb-2">Hey, I'm Raeyaan</p>
                 <h1 className="heading-display leading-tight mb-6">
-                  The World Wasn't Built<br/>for Everyone. So I'm<br/>Building What It Left Out.
+                  The World Wasn't Built<br className="hidden md:block" /> for Everyone. So I'm<br className="hidden md:block" /> Building What It Left Out.
                 </h1>
               </div>
 
@@ -66,15 +66,15 @@ export default function Home() {
 
         {/* Recognized By strip */}
         <div className="border-t border-[#e6dcc8] bg-[#f4ecda]/60 py-6">
-          <div className="container-custom flex items-center gap-8 flex-wrap justify-between">
+          <div className="container-custom flex flex-col md:flex-row gap-3 md:gap-8 md:items-center md:justify-between">
             <span className="text-xs uppercase tracking-widest text-[var(--muted)] font-semibold shrink-0">
               Recognized By
             </span>
-            <div className="flex gap-8 md:gap-12 flex-wrap items-center opacity-80">
-              <span className="font-serif font-bold text-[#3d362c]">Stanford University</span>
-              <span className="font-serif font-bold text-[#3d362c]">Synopsys Science Fair</span>
-              <span className="font-serif font-bold text-[#3d362c]">Conrad Challenge</span>
-              <span className="font-serif font-bold text-[#3d362c] hidden md:inline">Rooting Minds</span>
+            <div className="flex flex-wrap gap-x-6 gap-y-2 md:gap-x-12 items-center opacity-80">
+              <span className="font-serif font-bold text-sm md:text-base text-[#3d362c]">Stanford University</span>
+              <span className="font-serif font-bold text-sm md:text-base text-[#3d362c]">Synopsys Science Fair</span>
+              <span className="font-serif font-bold text-sm md:text-base text-[#3d362c]">Conrad Challenge</span>
+              <span className="font-serif font-bold text-sm md:text-base text-[#3d362c]">Rooting Minds</span>
             </div>
           </div>
         </div>
@@ -189,9 +189,9 @@ export default function Home() {
               <p className="prose">
                 It began with an interview with a para-athlete, who told us even Stanford's lab equipment can't be used by blade runners. We built an insole with eight capacitive pressure sensors to fill that gap. After SIMR ended, my team and I continued the project under the mentorship of a PhD student in the Human Performance Lab. Since then, we've redesigned the circuit boards and got the full system running. Next is calibration and lab testing.
               </p>
-              <div className="flex gap-3 flex-wrap pt-2">
-                <span className="badge">Stanford SIMR 2025–26</span>
-                <span className="text-xs px-4 py-2 rounded-full border border-amber-300 text-amber-700 font-semibold">
+              <div className="flex gap-2 md:gap-3 flex-wrap pt-2">
+                <span className="bg-[#8c1515] text-white rounded-full px-3 py-1.5 md:px-5 md:py-2 text-[0.65rem] md:text-xs font-semibold whitespace-nowrap">Stanford SIMR 2025–26</span>
+                <span className="text-[0.65rem] md:text-xs px-3 py-1.5 md:px-4 md:py-2 rounded-full border border-amber-300 text-amber-700 font-semibold whitespace-nowrap">
                   Human Performance Lab
                 </span>
               </div>
@@ -215,7 +215,7 @@ export default function Home() {
             </div>
           </Reveal>
 
-          <div className="grid md:grid-cols-3 gap-6 auto-rows-fr">
+          <div className="grid md:grid-cols-3 gap-6 md:auto-rows-fr">
             {[
               {
                 image: '/images/projects/insole-pcb-render.png',
@@ -320,7 +320,7 @@ export default function Home() {
             </div>
           </Reveal>
 
-          <div className="grid md:grid-cols-4 gap-6 auto-rows-fr">
+          <div className="grid md:grid-cols-4 gap-6 md:auto-rows-fr">
             {[
               {
                 category: 'Electronics & PCB Design',
