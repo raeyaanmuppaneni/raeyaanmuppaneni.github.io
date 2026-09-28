@@ -1,5 +1,10 @@
 import PageHero from '@/components/PageHero';
 
+export const metadata = {
+  title: 'About | Raeyaan Muppaneni',
+  description: "High schooler, Stanford researcher, and someone who's happiest with a screwdriver in hand — the fuller story behind Raeyaan Muppaneni.",
+};
+
 const ACCENTS = ['#8c1515', '#a0522d', '#c9a876', '#6b7c52', '#8c1515', '#a0522d'];
 
 function SectionCard({ index, title, children }) {

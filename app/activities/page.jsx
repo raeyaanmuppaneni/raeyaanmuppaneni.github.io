@@ -1,5 +1,10 @@
 import PageHero from '@/components/PageHero';
 
+export const metadata = {
+  title: 'Activities & Leadership | Raeyaan Muppaneni',
+  description: 'Rooting Minds, Youth Council, FCSN volunteering, cricket captaincy, and debate — the work Raeyaan does outside the lab.',
+};
+
 const ACCENTS = ['#8c1515', '#a0522d', '#c9a876', '#6b7c52', '#8c1515'];
 
 function ActivityCard({ index, title, meta, description, items, itemsLabel = 'Highlights' }) {

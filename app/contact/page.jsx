@@ -20,24 +20,19 @@ export default function Contact() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    try {
-      const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
+    // No third-party form backend is configured, so this opens the visitor's
+    // own email client with the message pre-filled — works with zero setup.
+    const body = `${formData.message}\n\n— ${formData.name} (${formData.email})`;
+    const mailto = `mailto:raeyaanmuppaneni@gmail.com?subject=${encodeURIComponent(
+      formData.subject
+    )}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
 
-      if (response.ok) {
-        setSubmitted(true);
-        setFormData({ name: '', email: '', subject: '', message: '' });
-        setTimeout(() => setSubmitted(false), 5000);
-      }
-    } catch (error) {
-      console.error('Form submission error:', error);
-    }
+    setSubmitted(true);
+    setTimeout(() => setSubmitted(false), 6000);
   };
 
   return (
@@ -96,7 +91,7 @@ export default function Contact() {
 
             {submitted && (
               <div className="p-4 bg-[#eef1e7] border border-[#c3cdab] rounded-xl mb-6 text-sm text-[#4a5636] font-medium">
-                Message sent successfully — I'll get back to you soon.
+                Opening your email client with this message pre-filled — just hit send there.
               </div>
             )}
 

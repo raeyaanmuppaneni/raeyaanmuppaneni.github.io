@@ -34,7 +34,6 @@ export default function Header() {
   const navItems = [
     { label: 'About', href: '/about' },
     { label: 'Work', href: '/work' },
-    { label: 'Research', href: '/research' },
     { label: 'Activities', href: '/activities' },
     { label: 'Resume', href: '/resume' },
     { label: 'Contact', href: '/contact' },
@@ -106,6 +105,9 @@ export default function Header() {
         <button
           className="lg:hidden p-2 rounded-lg hover:bg-[#f0e9d8] transition"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={mobileMenuOpen}
+          aria-controls="mobile-menu"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={mobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
@@ -114,7 +116,7 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="absolute top-full left-0 right-0 bg-[#fbf7ef] border-b border-[#e6dcc8] lg:hidden">
+          <div id="mobile-menu" className="absolute top-full left-0 right-0 bg-[#fbf7ef] border-b border-[#e6dcc8] lg:hidden">
             <div className="container-custom py-4 flex flex-col gap-3">
               {navItems.map((item) => (
                 <Link

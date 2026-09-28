@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import JourneyTimeline from '@/components/JourneyTimeline';
 import HeroPortrait from '@/components/HeroPortrait';
 import Reveal from '@/components/Reveal';
 
@@ -82,17 +81,20 @@ export default function Home() {
       </section>
 
       {/* ============ STANFORD BANNER ============ */}
-      <section className="relative h-64 md:h-80 overflow-hidden">
+      <section className="relative h-[60vh] md:h-[70vh] overflow-hidden bg-[#2b2620]">
         <img
-          src="/images/stanford/quad-sunset.jpg"
-          alt="Stanford University Main Quad at sunset"
+          src="/images/profile/stanford-lab.jpg"
+          alt="Raeyaan working inside the Human Performance Lab at Stanford"
           className="absolute inset-0 w-full h-full object-cover"
+          style={{ objectPosition: '72% 40%' }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#2b2620]/80 via-[#2b2620]/20 to-transparent"></div>
-        <div className="relative h-full container-custom flex items-end pb-8">
-          <p style={{ fontFamily: "'Caveat', cursive", fontWeight: 600 }} className="text-3xl md:text-4xl text-white/95">
-            This is where a lot of the magic happens
-          </p>
+
+        <div className="absolute inset-x-0 bottom-0 z-20 pb-8 pt-24 bg-gradient-to-t from-[#2b2620]/90 via-[#2b2620]/40 to-transparent">
+          <div className="container-custom">
+            <p style={{ fontFamily: "'Caveat', cursive", fontWeight: 600 }} className="text-3xl md:text-4xl text-white/95">
+              Working inside the Human Performance Lab in Stanford
+            </p>
+          </div>
         </div>
       </section>
 
@@ -115,8 +117,8 @@ export default function Home() {
                 <div className="absolute -inset-4 bg-gradient-to-br from-[#8c1515]/20 via-[#c9a876]/20 to-transparent rounded-3xl blur-2xl"></div>
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-[#e6dcc8]">
                   <img
-                    src="/images/profile/stanford-arch.jpg"
-                    alt="Raeyaan walking through the Memorial Church arch at Stanford University"
+                    src="/images/projects/aac-prototype.jpg"
+                    alt="A breadboard prototype mid-build — wires, buttons, and a microcontroller"
                     className="w-full h-auto object-cover"
                   />
                 </div>
@@ -150,23 +152,6 @@ export default function Home() {
               </div>
             </Reveal>
           </div>
-        </div>
-      </section>
-
-      {/* ============ JOURNEY SECTION ============ */}
-      <section className="py-24 bg-[#fbf7ef]">
-        <div className="container-custom">
-          <Reveal>
-            <div className="text-center mb-16">
-              <p className="subtitle text-red-800 mb-4">The Timeline</p>
-              <h2 className="heading-lg mb-4">My Story So Far</h2>
-              <p className="prose text-lg max-w-2xl mx-auto">
-                From "curious kid with a screwdriver" to Stanford researcher — here's the short version of how I got here.
-              </p>
-            </div>
-          </Reveal>
-
-          <JourneyTimeline />
         </div>
       </section>
 
@@ -237,7 +222,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-6 auto-rows-fr">
             {[
               {
-                icon: '📊',
+                image: '/images/projects/insole-pcb-render.png',
                 title: 'Capacitive Sensing Insole',
                 org: 'Stanford University',
                 desc: "Built a smart insole at Stanford that reads pressure and gait in real time, to help para-athletes train more safely. I handled the hardware and firmware — all of it.",
@@ -246,7 +231,7 @@ export default function Home() {
                 size: 'big',
               },
               {
-                icon: '🤖',
+                image: '/images/projects/emg-device.jpg',
                 title: 'EMG-Controlled Robotics',
                 org: '2nd Place · Science Fair',
                 desc: "Trained a robotic arm to move using my own muscle signals — a first step toward more responsive prosthetics.",
@@ -264,7 +249,7 @@ export default function Home() {
                 size: 'small',
               },
               {
-                icon: '🌱',
+                image: '/images/logos/rooting-minds.png',
                 title: 'Rooting Minds Initiative',
                 org: 'Co-Founder & President',
                 desc: "Co-founded a platform that's brought accessible technology to 100+ neurodivergent students so far.",
@@ -281,9 +266,15 @@ export default function Home() {
                 <Link href={project.link} className="block h-full">
                   <div className={`card group cursor-pointer h-full flex flex-col ${project.size === 'big' ? 'md:flex-row md:items-center md:gap-8' : ''}`}>
                     <div className={project.size === 'big' ? 'md:w-1/3 flex flex-col items-start' : ''}>
-                      <span className={`${project.size === 'big' ? 'text-6xl' : 'text-4xl'} group-hover:scale-110 transition-transform block mb-3`}>
-                        {project.icon}
-                      </span>
+                      {project.image ? (
+                        <div className={`rounded-xl overflow-hidden border border-[#e6dcc8] mb-3 group-hover:scale-105 transition-transform ${project.size === 'big' ? 'w-full aspect-square' : 'w-16 h-16'}`}>
+                          <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+                        </div>
+                      ) : (
+                        <span className={`${project.size === 'big' ? 'text-6xl' : 'text-4xl'} group-hover:scale-110 transition-transform block mb-3`}>
+                          {project.icon}
+                        </span>
+                      )}
                       <h3 className={project.size === 'big' ? 'heading-md' : 'heading-sm'}>{project.title}</h3>
                       <p className="text-sm text-red-800 font-semibold mb-2">
                         {project.org}

@@ -14,7 +14,6 @@ This portfolio presents:
 
 - Clean, minimalist design
 - Responsive mobile-friendly layout
-- Dark mode support
 - Fast performance
 - Easy content updates
 
@@ -23,7 +22,7 @@ This portfolio presents:
 - **Framework**: Next.js with React
 - **Styling**: Tailwind CSS
 - **Deployment**: GitHub Pages (static export)
-- **Hosting**: `raeyaan-muppaneni.github.io`
+- **Hosting**: `raeyaanmuppaneni.github.io`
 
 ## Getting Started
 
@@ -87,16 +86,16 @@ raeyaan-portfolio/
 
 ## Deployment to GitHub Pages
 
-1. Create a repository named `raeyaan-muppaneni.github.io` on GitHub
+1. Create a repository named `raeyaanmuppaneni.github.io` on GitHub
 2. Push the code to the `main` branch
 3. GitHub Pages will automatically deploy from the `out` folder
 
 ```bash
-git remote add origin https://github.com/raeyaan/raeyaan-muppaneni.github.io.git
+git remote add origin https://github.com/raeyaan/raeyaanmuppaneni.github.io.git
 git push -u origin main
 ```
 
-The site will be live at `https://raeyaan-muppaneni.github.io`
+The site will be live at `https://raeyaanmuppaneni.github.io`
 
 ## Customization
 
@@ -129,6 +128,6 @@ This portfolio is personal work. Please respect copyright and attribution.
 
 ---
 
-**Website**: [raeyaan-muppaneni.github.io](https://raeyaan-muppaneni.github.io)  
+**Website**: [raeyaanmuppaneni.github.io](https://raeyaanmuppaneni.github.io)  
 **Email**: raeyaanmuppaneni@gmail.com  
-**GitHub**: [@raeyaan](https://github.com/raeyaan)
+**GitHub**: [@raeyaanmuppaneni](https://github.com/raeyaanmuppaneni)

@@ -1,5 +1,10 @@
 import PageHero from '@/components/PageHero';
 
+export const metadata = {
+  title: 'Resume | Raeyaan Muppaneni',
+  description: 'Education, research, leadership, and technical skills — Raeyaan Muppaneni’s resume.',
+};
+
 const ACCENTS = ['#8c1515', '#a0522d', '#c9a876', '#6b7c52', '#8c1515', '#a0522d', '#c9a876'];
 
 function ResumeSection({ index, title, children }) {

@@ -7,9 +7,9 @@ export default function HeroPortrait() {
       {/* Portrait frame — bleeds toward the bottom like a real photo crop */}
       <div className="relative rounded-t-[2.5rem] rounded-b-none overflow-hidden border-2 border-[#e6dcc8] shadow-2xl aspect-[4/5] bg-[#e2d5b8]">
         <img
-          src="/images/profile/raeyaan.jpg"
-          alt="Raeyaan Muppaneni"
-          className="absolute inset-0 w-full h-full object-cover"
+          src="/images/profile/hero.jpg"
+          alt="Raeyaan Muppaneni holding his Stanford SIMR Certificate of Achievement"
+          className="absolute inset-0 w-full h-full object-cover object-top"
         />
 
         {/* Bottom fade for a photographic feel */}
