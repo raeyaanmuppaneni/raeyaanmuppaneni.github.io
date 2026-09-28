@@ -47,7 +47,7 @@ export default function Header() {
             RM
           </div>
           <span className="hidden sm:block font-bold text-lg text-[#2b2620]">
-            Raeyaan
+            Raeyaan Muppaneni
           </span>
         </Link>
 

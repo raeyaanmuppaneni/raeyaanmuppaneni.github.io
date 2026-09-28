@@ -371,7 +371,7 @@ export default function Home() {
                 className={item.size === 'big' ? 'md:col-span-2' : 'md:col-span-1'}
               >
                 <div className={`card group h-full ${item.size === 'big' ? 'text-left flex items-center gap-6' : 'text-center'}`}>
-                  <div className={`${item.size === 'big' ? 'text-6xl' : 'text-4xl mx-auto'} mb-4 group-hover:scale-110 transition-transform shrink-0`}>
+                  <div className={`${item.size === 'big' ? 'w-20 text-6xl' : 'text-4xl mx-auto'} mb-4 group-hover:scale-110 transition-transform shrink-0 flex items-center justify-center`}>
                     {item.icon}
                   </div>
                   <div>
