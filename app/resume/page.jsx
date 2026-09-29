@@ -98,7 +98,7 @@ export default function Resume() {
               items={[
                 'YOLOv8-based wearable for visually impaired users – 2nd place Synopsys Science Fair',
                 'Handheld communication device for neurodivergent children (in development)',
-                'EEG-based focus application; filed patent application for medical-emergency wearable',
+                'EEG-based focus application exploring neurofeedback approaches for attention support',
               ]}
             />
           </ResumeSection>
