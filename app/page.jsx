@@ -22,8 +22,7 @@ export default function Home() {
               {/* Trust badges row */}
               <div className="flex items-center gap-3 flex-wrap">
                 <div className="flex items-center gap-1.5 bg-[#fffdf8] border border-[#e6dcc8] rounded-full px-3 py-1.5 shadow-sm">
-                  <span className="text-amber-600">★★★★★</span>
-                  <span className="text-xs font-bold text-[#2b2620]">4.71 GPA</span>
+                  <span className="text-xs font-bold text-[#2b2620]">Weighted GPA · 4.71</span>
                 </div>
                 <div className="flex items-center gap-1.5 bg-[#fffdf8] border border-[#e6dcc8] rounded-full px-3 py-1.5 shadow-sm">
                   <span className="text-xs font-bold text-[#8c1515]">Stanford SIMR</span>
@@ -40,7 +39,7 @@ export default function Home() {
 
               {/* Description */}
               <p className="prose text-lg">
-                I design hardware for people that standard tools leave out. Right now I lead a team at Stanford building a pressure-sensing insole for blade runners, whose gait can't be measured on the lab's instrumented treadmill. Before that, I built a robotic arm controlled by muscle signals and an object detection device for blind people.
+                I design hardware for people that standard tools leave out. Through Stanford SIMR, my team began building a pressure-sensing insole for blade runners, whose gait can't be measured on the lab's instrumented treadmill. We have continued the project with mentorship from the Human Performance Lab. Before that, I built a robotic arm controlled by muscle signals and an object detection device for blind people.
               </p>
 
               {/* CTA Buttons */}
@@ -68,7 +67,7 @@ export default function Home() {
         <div className="border-t border-[#e6dcc8] bg-[#f4ecda]/60 py-6">
           <div className="container-custom flex flex-col md:flex-row gap-3 md:gap-8 md:items-center md:justify-between">
             <span className="text-xs uppercase tracking-widest text-[var(--muted)] font-semibold shrink-0">
-              Recognized By
+              Programs, Research & Recognition
             </span>
             <div className="flex flex-wrap gap-x-6 gap-y-2 md:gap-x-12 items-center opacity-80">
               <span className="font-serif font-bold text-sm md:text-base text-[#3d362c]">Stanford University</span>
@@ -92,7 +91,7 @@ export default function Home() {
         <div className="absolute inset-x-0 bottom-0 z-20 pb-8 pt-24 bg-gradient-to-t from-[#2b2620]/90 via-[#2b2620]/40 to-transparent">
           <div className="container-custom">
             <p style={{ fontFamily: "'Caveat', cursive", fontWeight: 600 }} className="text-3xl md:text-4xl text-white/95">
-              Working inside the Human Performance Lab in Stanford
+              Project work in Stanford's Human Performance Lab
             </p>
           </div>
         </div>
@@ -106,7 +105,7 @@ export default function Home() {
               <p className="subtitle text-red-800 mb-4">A Bit About Me</p>
               <h2 className="heading-lg mb-4">Hi, I'm Raeyaan</h2>
               <p className="prose text-lg max-w-2xl mx-auto">
-                Student at Irvington High and student researcher in Stanford's Human Performance Lab. I do most of my work hands-on: designing the boards, soldering them, writing the firmware, and testing them.
+                Student at Irvington High. After Stanford SIMR, I continued our insole project with mentorship from a PhD student in Stanford's Human Performance Lab. I do most of my work hands-on: designing the boards, soldering them, writing the firmware, and testing them.
               </p>
             </div>
           </Reveal>
@@ -138,7 +137,7 @@ export default function Home() {
                 <div className="grid grid-cols-2 gap-4">
                   {[
                     { label: 'Weighted GPA', value: '4.71' },
-                    { label: 'Dream School', value: 'Stanford' },
+                    { label: 'Research', value: 'Bioengineering' },
                     { label: 'Focus', value: 'Biomedical Engineering' },
                     { label: 'Mission', value: 'Closing gaps' },
                   ].map((item, idx) => (
@@ -220,8 +219,8 @@ export default function Home() {
               {
                 image: '/images/projects/insole-pcb-render.png',
                 title: 'Capacitive Sensing Insole',
-                org: 'SIMR & Human Performance Lab at Stanford University',
-                desc: "Built a smart insole at Stanford that reads pressure and gait in real time, to help para-athletes train more safely. I handled the hardware and firmware.",
+                org: 'Stanford SIMR · Continued with HPL mentorship',
+                desc: "Built a smart insole through Stanford SIMR that reads pressure and gait in real time, then continued the project with Human Performance Lab mentorship. I handled the hardware and firmware.",
                 tags: ['Bioengineering', 'PCB', 'Embedded'],
                 link: '/work',
                 size: 'big',
