@@ -85,7 +85,9 @@ export default function Resume() {
               title="EMG-Controlled Robotic Arm Research"
               meta="Polygence · 2024 – Present"
               items={[
-                'Built EMG-controlled arm translating muscle signals to mechanical movement',
+                'Built a wearable EMG acquisition system to capture muscle activity and translate signals into robotic-arm commands',
+                'Collected a 5-gesture dataset and trained KNN, Random Forest, and MLP classifiers; best model reached ~85% test accuracy',
+                'Deployed the trained model on a Raspberry Pi 4 for real-time control of a servo-actuated robotic arm',
                 '2nd place at Alameda Science Fair',
                 'Published in IEEE: <a href="https://xplorestaging.ieee.org/document/11496321" target="_blank" rel="noopener noreferrer" class="font-semibold text-red-800 hover:underline">“Real-Time Control of a Low-Cost Robotic Arm Using EMG Signal Classification by AI-Based Machine Learning on Raspberry Pi”</a> — 2026 World Conference on Computational Science and Technology (WcCST); DOI: 10.1109/WcCST67302.2026.11496321',
               ]}
