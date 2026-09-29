@@ -67,10 +67,10 @@ export default function Home() {
         <div className="border-t border-[#e6dcc8] bg-[#f4ecda]/60 py-6">
           <div className="container-custom flex flex-col md:flex-row gap-3 md:gap-8 md:items-center md:justify-between">
             <span className="text-xs uppercase tracking-widest text-[var(--muted)] font-semibold shrink-0">
-              Programs, Research & Recognition
+              Programs & Research
             </span>
             <div className="flex flex-wrap gap-x-6 gap-y-2 md:gap-x-12 items-center opacity-80">
-              <span className="font-serif font-bold text-sm md:text-base text-[#3d362c]">Stanford University</span>
+              <span className="font-serif font-bold text-sm md:text-base text-[#3d362c]">Stanford SIMR · HPL Mentorship</span>
               <span className="font-serif font-bold text-sm md:text-base text-[#3d362c]">Synopsys Science Fair</span>
               <span className="font-serif font-bold text-sm md:text-base text-[#3d362c]">Conrad Challenge</span>
               <span className="font-serif font-bold text-sm md:text-base text-[#3d362c]">Rooting Minds</span>
@@ -130,7 +130,7 @@ export default function Home() {
                   <p className="prose mb-4">
                     I got into engineering by taking apart remotes and fans to see what was inside. Now I build the insides myself: designing circuit boards, writing the firmware that runs them, and testing them with the people they're for.                  </p>
                   <p className="prose">
-                    My projects have ranged from a robotic arm controlled by muscle signals to a wearable that helps visually impaired people sense what's around them. The one I'm proudest of started with an interview: a blade runner told me even Stanford's lab equipment couldn't measure how she runs. My team is now building an insole that can.
+                    My projects have ranged from a robotic arm controlled by muscle signals to a wearable that helps visually impaired people sense what's around them. The one I'm proudest of started with an interview: a blade runner told me even Stanford's lab equipment couldn't measure how she runs. My team is now building an insole designed to address that measurement gap.
                   </p>
                 </div>
 
@@ -181,7 +181,7 @@ export default function Home() {
 
             {/* Text */}
             <Reveal delay={150} className="order-1 md:order-2 space-y-6">
-              <h2 className="heading-lg">My Summer at Stanford</h2>
+              <h2 className="heading-lg">My Summer at Stanford SIMR</h2>
               <p className="prose text-lg">
                 This past summer, my team and I started building a smart insole through Stanford's <span className="font-bold text-slate-900">SIMR program</span>, a summer research program for high school students. The insole measures foot pressure as someone walks or runs.
               </p>
@@ -189,7 +189,7 @@ export default function Home() {
                 It began with an interview with a para-athlete, who told us even Stanford's lab equipment can't be used by blade runners. We built an insole with eight capacitive pressure sensors to fill that gap. After SIMR ended, my team and I continued the project under the mentorship of a PhD student in the Human Performance Lab. Since then, we've redesigned the circuit boards and got the full system running. Next is calibration and lab testing.
               </p>
               <div className="flex gap-2 md:gap-3 flex-wrap pt-2">
-                <span className="bg-[#8c1515] text-white rounded-full px-3 py-1.5 md:px-5 md:py-2 text-[0.65rem] md:text-xs font-semibold whitespace-nowrap">Stanford SIMR 2025–26</span>
+                <span className="bg-[#8c1515] text-white rounded-full px-3 py-1.5 md:px-5 md:py-2 text-[0.65rem] md:text-xs font-semibold whitespace-nowrap">Stanford SIMR 2026 · Continuing Research</span>
                 <span className="text-[0.65rem] md:text-xs px-3 py-1.5 md:px-4 md:py-2 rounded-full border border-amber-300 text-amber-700 font-semibold whitespace-nowrap">
                   Human Performance Lab
                 </span>
