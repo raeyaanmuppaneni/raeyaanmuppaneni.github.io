@@ -87,7 +87,7 @@ export default function Resume() {
               items={[
                 'Built EMG-controlled arm translating muscle signals to mechanical movement',
                 '2nd place at Alameda Science Fair',
-                'Research paper prepared for publication/conference submission',
+                'Published in IEEE: <a href="https://xplorestaging.ieee.org/document/11496321" target="_blank" rel="noopener noreferrer" class="font-semibold text-red-800 hover:underline">“Real-Time Control of a Low-Cost Robotic Arm Using EMG Signal Classification by AI-Based Machine Learning on Raspberry Pi”</a> — 2026 World Conference on Computational Science and Technology (WcCST); DOI: 10.1109/WcCST67302.2026.11496321',
               ]}
             />
             <Entry
