@@ -69,7 +69,7 @@ export default function Contact() {
                   GitHub <span>→</span>
                 </a>
                 <a
-                  href="https://linkedin.com/in/raeyaan"
+                  href="https://www.linkedin.com/in/raeyaan-muppanneni-5a023a2b2/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-slate-700 hover:text-red-800 transition"
