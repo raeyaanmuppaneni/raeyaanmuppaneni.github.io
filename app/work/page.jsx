@@ -98,7 +98,7 @@ export default function Work() {
     {
       slug: 'fluora-bioscience',
       title: 'Fluora Bioscience Lab',
-      year: '2026',
+      year: 'September 2026 – Present',
       status: 'Electronics Trainee',
       description: 'Hands-on electronics work supporting bioscience instrumentation',
       overview: `At Fluora Bioscience, I gained hands-on experience with electronics used in laboratory instrumentation, working on circuit-level problems involving LED driving, photodetector amplification, and battery-powered systems.`,
