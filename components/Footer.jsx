@@ -36,7 +36,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://linkedin.com/in/raeyaan" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
+                <a href="https://www.linkedin.com/in/raeyaan-muppanneni-5a023a2b2/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
                   LinkedIn
                 </a>
               </li>
