@@ -14,16 +14,16 @@ export default function Work() {
       slug: 'capacitive-insole',
       title: 'Capacitive Sensing Insole for Gait Analysis',
       year: '2026',
-      status: 'Ongoing at Stanford',
+      status: 'Stanford SIMR → Continued with Human Performance Lab mentorship',
       description: 'Biomedical device for analyzing loading and gait asymmetry in para-athletes',
-      overview: `Working with Stanford's Human Performance Lab and NMBL, I built a capacitive force-sensing plate for running blades — custom rigid PCB, bare-metal STM32 firmware, and the Python tools to calibrate and visualize the data.`,
+      overview: `Through Stanford SIMR, I helped build a capacitive force-sensing system for running blades. After the program ended, my team continued the project with mentorship from a PhD student in Stanford's Human Performance Lab, redesigning the hardware, firmware, and calibration tools.`,
       image: '/images/projects/insole-pcb-photo.jpg',
       highlights: [
         'Designed a rigid PCB carrying two TI FDC2214 capacitance-to-digital converters — 8 sensor channels total, each an LC tank read over I²C',
         'Wrote bare-metal C firmware for an STM32WB55 (no HAL, no CubeMX) that streams live sensor data over serial at 460,800 baud',
         'Built Python tooling for live plotting, per-sensor weight calibration, and mapping physical sensors to data channels',
         'Characterized real sensor behavior: resting capacitance, non-linear force response, and hysteresis after heavy loads',
-        'Continued the work from Stanford SIMR into Stanford NMBL as an ongoing research project',
+        'Continued the SIMR project after the summer with Human Performance Lab mentorship',
       ],
       tech: ['KiCad / EasyEDA', 'STM32 Bare-Metal C', 'FDC2214 Capacitive Sensing', 'Python', 'Signal Calibration'],
       github: 'https://github.com/raeyaanmuppaneni/Blade-Insole',
@@ -78,54 +78,45 @@ export default function Work() {
         'Prototype testing with target users',
       ],
       tech: ['Embedded Systems', 'User Research', 'Hardware Design'],
-      github: 'https://github.com/raeyaanmuppaneni/Neurodivergent-App',
+      github: '#',
     },
     {
       slug: 'focus-app',
       title: 'EEG-Based Focus Application',
       year: '2023–Present',
-      status: 'Research & Patent Filing',
-      description: 'Neurofeedback system using EEG for attention support',
-      overview: `Exploring EEG-based biofeedback to help neurodivergent users maintain focus. Filed patent application for medical-emergency wearable extension.`,
+      status: 'Exploratory Project',
+      description: 'Neurofeedback exploration using EEG for attention support',
+      overview: `Exploring EEG-based biofeedback as a possible tool for attention support. This project is still at an early exploratory stage and is being documented separately from other wearable concepts.`,
       highlights: [
         'EEG data collection and analysis',
-        'Patent application filed for medical-emergency features',
-        'Research documentation and validation',
+        'Exploration of neurofeedback approaches for attention support',
+        'Early-stage research documentation and validation',
       ],
       tech: ['EEG Processing', 'Neurofeedback', 'Signal Analysis'],
       github: '#',
     },
     {
       slug: 'applied-math-research',
-      title: 'Applied Mathematics Research',
+      title: 'Advanced Mathematics & Independent Study',
       year: '2024 – Present',
       status: 'Independent Study',
-      description: 'Self-directed research in multivariable calculus, robotics kinematics, and group theory',
-      overview: `Self-directed research in multivariable calculus, Jacobians, robotics kinematics, group theory, and open problems in mathematics — documented in LaTeX with proofs and exercises.`,
+      description: 'Self-directed study in multivariable calculus, robotics kinematics, and group theory',
+      overview: `Self-directed study of multivariable calculus, linear algebra, group theory, and mathematical methods used in robotics, with notes, proofs, and problem sets documented in LaTeX.`,
       highlights: [
-        'Independent study spanning multivariable calculus, Jacobians, and group theory',
-        'Applied kinematics research directly to robotics projects like the EMG-controlled arm',
-        'All work documented and proven formally in LaTeX',
+        'Independent study spanning multivariable calculus, Jacobians, linear algebra, and group theory',
+        'Applied mathematical methods directly to robotics projects such as the EMG-controlled arm',
+        'Documented notes, proofs, and problem sets in LaTeX',
       ],
-      tech: ['Multivariable Calculus', 'Group Theory', 'LaTeX', 'Robotics Kinematics'],
+      tech: ['Multivariable Calculus', 'Linear Algebra', 'Group Theory', 'LaTeX', 'Robotics Kinematics'],
       github: '#',
     },
-    {
-      slug: 'math-competitions',
-      title: 'Mathematics Competitions',
-      year: '2023 – Present',
-      status: 'USAMO Qualifier',
-      description: 'Rigorous competition mathematics including USAMO qualification and international contests',
-      overview: `Rigorous competition mathematics including USAMO qualification and participation in international contests — AMC, Cayley, COMC, AMO, and IYMC.`,
-      highlights: [
-        'USAMO Qualifier · AMC 12A: 139.5 · AMC 12B: 144',
-        'High Distinction, Australian Mathematics Competition (2025)',
-        'Distinction, Cayley Contest (2025)',
-        'Honours, COMC (2024) · AMO Silver & Bronze · IYMC Finalist',
-      ],
-      tech: ['Competition Mathematics', 'Problem Solving'],
-      github: '#',
-    },
+  ];
+
+  const awards = [
+    'USAMO Qualifier · AMC 12A: 139.5 · AMC 12B: 144',
+    'High Distinction, Australian Mathematics Competition (2025)',
+    'Distinction, Cayley Contest (2025)',
+    'Honours, COMC (2024) · AMO Silver & Bronze · IYMC Finalist',
   ];
 
   return (
@@ -142,10 +133,7 @@ export default function Work() {
             const accent = ACCENTS[idx % ACCENTS.length];
             return (
               <div key={project.slug} className="card relative overflow-hidden">
-                <div
-                  className="absolute top-0 left-0 right-0 h-1.5"
-                  style={{ backgroundColor: accent }}
-                ></div>
+                <div className="absolute top-0 left-0 right-0 h-1.5" style={{ backgroundColor: accent }}></div>
 
                 <div className="mb-4">
                   <div className="flex items-center gap-3 flex-wrap mb-2">
@@ -153,10 +141,7 @@ export default function Work() {
                   </div>
                   <div className="flex gap-3 items-center text-sm text-[var(--muted)] flex-wrap">
                     <span className="font-semibold">{project.year}</span>
-                    <span
-                      className="text-xs px-3 py-1 rounded-full font-semibold text-white"
-                      style={{ backgroundColor: accent }}
-                    >
+                    <span className="text-xs px-3 py-1 rounded-full font-semibold text-white" style={{ backgroundColor: accent }}>
                       {project.status}
                     </span>
                   </div>
@@ -175,10 +160,7 @@ export default function Work() {
                   <ul className="space-y-2">
                     {project.highlights.map((highlight, hidx) => (
                       <li key={hidx} className="text-sm text-slate-600 flex gap-2.5">
-                        <span
-                          className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
-                          style={{ backgroundColor: accent }}
-                        ></span>
+                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: accent }}></span>
                         {highlight}
                       </li>
                     ))}
@@ -189,10 +171,7 @@ export default function Work() {
                   <h3 className="heading-sm mb-3 text-base">Technology</h3>
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((tech) => (
-                      <span
-                        key={tech}
-                        className="text-xs px-3 py-1 bg-amber-100 text-red-900 rounded-full font-medium"
-                      >
+                      <span key={tech} className="text-xs px-3 py-1 bg-amber-100 text-red-900 rounded-full font-medium">
                         {tech}
                       </span>
                     ))}
@@ -200,18 +179,28 @@ export default function Work() {
                 </div>
 
                 {project.github !== '#' && (
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-red-800 hover:gap-3 transition-all"
-                  >
+                  <a href={project.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-semibold text-red-800 hover:gap-3 transition-all">
                     View on GitHub <span>→</span>
                   </a>
                 )}
               </div>
             );
           })}
+
+          <section className="card relative overflow-hidden">
+            <div className="absolute top-0 left-0 right-0 h-1.5 bg-[#8c1515]"></div>
+            <p className="subtitle text-red-800 mb-2">Awards & Mathematics</p>
+            <h2 className="heading-md mb-4">Mathematics Competitions</h2>
+            <p className="prose mb-5">Competition mathematics has been a separate part of my work from engineering and research, with a focus on proof-based problem solving and olympiad-style questions.</p>
+            <ul className="space-y-2">
+              {awards.map((award) => (
+                <li key={award} className="text-sm text-slate-600 flex gap-2.5">
+                  <span className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0 bg-[#8c1515]"></span>
+                  {award}
+                </li>
+              ))}
+            </ul>
+          </section>
         </div>
       </div>
     </div>
