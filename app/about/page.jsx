@@ -2,7 +2,7 @@ import PageHero from '@/components/PageHero';
 
 export const metadata = {
   title: 'About | Raeyaan Muppaneni',
-  description: "High schooler, Stanford researcher, and someone who's happiest with a screwdriver in hand — the fuller story behind Raeyaan Muppaneni.",
+  description: "High school engineer and researcher focused on assistive technology, biomedical engineering, robotics, and applied mathematics — the fuller story behind Raeyaan Muppaneni.",
 };
 
 const ACCENTS = ['#8c1515', '#a0522d', '#c9a876', '#6b7c52', '#8c1515', '#a0522d'];
@@ -35,7 +35,7 @@ export default function About() {
       <PageHero
         eyebrow="A Bit About Me"
         title="About Raeyaan"
-        subtitle="High schooler, Stanford researcher, and someone who's happiest with a screwdriver in hand. Here's the fuller picture."
+        subtitle="High school engineer and researcher focused on assistive technology, biomedical engineering, robotics, and applied mathematics. Here's the fuller picture."
       />
 
       <div className="container-custom py-16 md:py-20">
@@ -51,7 +51,7 @@ export default function About() {
 
           <SectionCard index={1} title="Research & Engineering">
             <p>
-              Currently, I'm working with Stanford University's Human Performance Lab through the Stanford Institutes of Medicine Summer Research Program (SIMR). I'm developing a capacitive sensing insole to study gait and loading in para-athletes, handling everything from PCB design to firmware and calibration.
+              Through Stanford SIMR, I helped develop a capacitive sensing insole for studying gait and loading in para-athletes. After the summer program ended, my team continued the project with mentorship from a PhD student in Stanford's Human Performance Lab, where I have focused on PCB design, firmware, calibration, and testing.
             </p>
             <p>
               Beyond Stanford, I've researched EMG-controlled robotics, built assistive wearables using computer vision, and explored applied mathematics through independent study in multivariable calculus, Jacobians, and group theory.
