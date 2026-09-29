@@ -100,7 +100,7 @@ export default function Work() {
       title: 'Fluora Bioscience Lab',
       year: 'September 2026 – Present',
       status: 'Electronics Trainee',
-      description: 'Hands-on electronics work supporting bioscience instrumentation',
+      description: 'Hands-on electronics work supporting bioscience instrumentation', // deployment refresh
       overview: `At Fluora Bioscience, I gained hands-on experience with electronics used in laboratory instrumentation, working on circuit-level problems involving LED driving, photodetector amplification, and battery-powered systems.`,
       highlights: [
         'Worked on LED drive circuitry for controlled optical illumination',
