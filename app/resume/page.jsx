@@ -74,9 +74,9 @@ export default function Resume() {
           <ResumeSection index={1} title="Research & Engineering">
             <Entry
               title="Stanford Institutes of Medicine Summer Research (SIMR) – Bioengineering"
-              meta="Stanford University · June 2026 – Present"
+              meta="Stanford University · Summer 2026"
               items={[
-                'Developed capacitive sensing insole for para-athlete gait analysis',
+                'Developed a capacitive sensing insole for para-athlete gait analysis through Stanford SIMR; after the program, continued the project with my team under mentorship from a PhD student in Stanford\'s Human Performance Lab',
                 'Designed rigid PCB and integrated electronics, firmware, calibration, testing',
                 'Leading 5-student team on hardware iteration and Conrad Challenge preparation',
               ]}
