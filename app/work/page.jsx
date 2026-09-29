@@ -37,6 +37,7 @@ export default function Work() {
       overview: `Myoelectric Signal Interpretation for Robotic Limb Control — a wearable EMG device and a robotic arm that learns to map muscle activity to hand movements, aimed at more responsive, accessible prosthetics.`,
       image: '/images/projects/emg-poster.jpg',
       highlights: [
+        'Published research in IEEE: “Real-Time Control of a Low-Cost Robotic Arm Using EMG Signal Classification by AI-Based Machine Learning on Raspberry Pi” (WcCST 2026)',
         '2nd place award at Alameda County Science Fair',
         'Built a wearable EMG device (Seeed XIAO ESP32-S3, 8-channel EMG front end, 9-axis IMU) that streams muscle-activity data in real time',
         'Collected a 5-gesture dataset (rest, fist, open hand, wrist flex, wrist extend) and trained KNN, Random Forest, and MLP classifiers',
@@ -202,6 +203,18 @@ export default function Work() {
               </div>
             );
           })}
+
+          <section className="card relative overflow-hidden">
+            <div className="absolute top-0 left-0 right-0 h-1.5 bg-[#8c1515]"></div>
+            <p className="subtitle text-red-800 mb-2">Published Research</p>
+            <h2 className="heading-md mb-4">IEEE Publication</h2>
+            <h3 className="heading-sm mb-2">Real-Time Control of a Low-Cost Robotic Arm Using EMG Signal Classification by AI-Based Machine Learning on Raspberry Pi</h3>
+            <p className="prose mb-3">Raeyaan V. Muppaneni, Shashank Mishra, Ishan Jain, and Vishal Kumar · 2026 World Conference on Computational Science and Technology (WcCST)</p>
+            <p className="text-sm text-slate-600 mb-5">DOI: 10.1109/WcCST67302.2026.11496321</p>
+            <a href="https://xplorestaging.ieee.org/document/11496321" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-semibold text-red-800 hover:gap-3 transition-all">
+              View on IEEE Xplore <span>→</span>
+            </a>
+          </section>
 
           <section className="card relative overflow-hidden">
             <div className="absolute top-0 left-0 right-0 h-1.5 bg-[#8c1515]"></div>
