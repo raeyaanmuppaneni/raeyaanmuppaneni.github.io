@@ -96,6 +96,22 @@ export default function Work() {
       github: '#',
     },
     {
+      slug: 'fluora-bioscience',
+      title: 'Fluora Bioscience Lab',
+      year: '2026',
+      status: 'Electronics Trainee',
+      description: 'Hands-on electronics work supporting bioscience instrumentation',
+      overview: `At Fluora Bioscience, I gained hands-on experience with electronics used in laboratory instrumentation, working on circuit-level problems involving LED driving, photodetector amplification, and battery-powered systems.`,
+      highlights: [
+        'Worked on LED drive circuitry for controlled optical illumination',
+        'Explored photodetector amplifier circuits for sensing low-level optical signals',
+        'Worked with battery and power circuitry for portable electronic systems',
+        'Gained practical experience connecting electronics design with bioscience instrumentation',
+      ],
+      tech: ['Analog Electronics', 'LED Drivers', 'Photodetectors', 'Amplifier Circuits', 'Battery Systems'],
+      github: '#',
+    },
+    {
       slug: 'applied-math-research',
       title: 'Advanced Mathematics & Independent Study',
       year: '2024 – Present',
