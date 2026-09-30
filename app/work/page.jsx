@@ -48,6 +48,22 @@ export default function Work() {
       github: 'https://github.com/raeyaanmuppaneni/EMG-controlled-robotic-arm',
     },
     {
+      slug: 'fluora-bioscience',
+      title: 'Fluora Bioscience Lab',
+      year: 'September 2026 – Present',
+      status: 'Electronics Trainee',
+      description: 'Hands-on electronics work supporting bioscience instrumentation', // deployment refresh
+      overview: `At Fluora Bioscience, I gained hands-on experience with electronics used in laboratory instrumentation, working on circuit-level problems involving LED driving, photodetector amplification, and battery-powered systems.`,
+      highlights: [
+        'Worked on LED drive circuitry for controlled optical illumination',
+        'Explored photodetector amplifier circuits for sensing low-level optical signals',
+        'Worked with battery and power circuitry for portable electronic systems',
+        'Gained practical experience connecting electronics design with bioscience instrumentation',
+      ],
+      tech: ['Analog Electronics', 'LED Drivers', 'Photodetectors', 'Amplifier Circuits', 'Battery Systems'],
+      github: '#',
+    },
+    {
       slug: 'obstacle-detection',
       title: 'Assistive Wearable for Visually Impaired Users',
       year: '2023–Present',
@@ -94,22 +110,6 @@ export default function Work() {
         'Early-stage research documentation and validation',
       ],
       tech: ['EEG Processing', 'Neurofeedback', 'Signal Analysis'],
-      github: '#',
-    },
-    {
-      slug: 'fluora-bioscience',
-      title: 'Fluora Bioscience Lab',
-      year: 'September 2026 – Present',
-      status: 'Electronics Trainee',
-      description: 'Hands-on electronics work supporting bioscience instrumentation', // deployment refresh
-      overview: `At Fluora Bioscience, I gained hands-on experience with electronics used in laboratory instrumentation, working on circuit-level problems involving LED driving, photodetector amplification, and battery-powered systems.`,
-      highlights: [
-        'Worked on LED drive circuitry for controlled optical illumination',
-        'Explored photodetector amplifier circuits for sensing low-level optical signals',
-        'Worked with battery and power circuitry for portable electronic systems',
-        'Gained practical experience connecting electronics design with bioscience instrumentation',
-      ],
-      tech: ['Analog Electronics', 'LED Drivers', 'Photodetectors', 'Amplifier Circuits', 'Battery Systems'],
       github: '#',
     },
     {
