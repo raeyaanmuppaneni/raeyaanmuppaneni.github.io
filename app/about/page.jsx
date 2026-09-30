@@ -95,7 +95,7 @@ export default function About() {
           <SectionCard index={4} title="Academics & Recognition">
             <div className="grid grid-cols-3 gap-4 not-prose mb-4">
               {[
-                { label: 'Weighted GPA', value: '4.71' },
+                { label: 'Weighted GPA', value: '4.728' },
                 { label: 'AMC 12B', value: '144' },
                 { label: 'Math Track', value: 'USAMO' },
               ].map((stat, i) => (
