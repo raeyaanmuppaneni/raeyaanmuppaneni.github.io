@@ -16,8 +16,8 @@ export default function HeroPortrait() {
         <div className="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-black/25 to-transparent"></div>
       </div>
 
-      {/* Floating credibility chip, like the reference site's small avatar badge */}
-      <div className="hidden md:flex absolute -left-8 top-10 items-center gap-2 bg-[#fffdf8] border border-[#e6dcc8] rounded-full pl-2 pr-4 py-2 shadow-lg">
+      {/* Floating credibility chip */}
+      <div className="hidden md:flex absolute -right-6 -top-5 items-center gap-2 bg-[#fffdf8] border border-[#e6dcc8] rounded-full pl-2 pr-4 py-2 shadow-lg z-20">
         <div className="w-8 h-8 rounded-full bg-[#8c1515] flex items-center justify-center text-white text-xs font-bold">
           RM
         </div>
