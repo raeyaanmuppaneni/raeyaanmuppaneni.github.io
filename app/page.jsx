@@ -137,8 +137,8 @@ export default function Home() {
                 <div className="grid grid-cols-2 gap-4">
                   {[
                     { label: 'Weighted GPA', value: '4.71' },
-                    { label: 'Research', value: 'Bioengineering' },
-                    { label: 'Focus', value: 'Biomedical Engineering' },
+                    { label: 'Research', value: 'Biomedical Engineering' },
+                    { label: 'Focus', value: 'Electrical Engineering' },
                     { label: 'Mission', value: 'Closing gaps' },
                   ].map((item, idx) => (
                     <div key={idx} className="p-4 bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl border border-amber-200">
