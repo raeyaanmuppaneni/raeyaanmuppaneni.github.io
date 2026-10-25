@@ -166,8 +166,17 @@ export default function Work() {
                 </div>
 
                 {project.image && (
-                  <div className="rounded-xl overflow-hidden border border-[#e6dcc8] mb-6 max-w-md">
-                    <img src={project.image} alt={project.title} className="w-full h-auto object-cover" />
+                  <div className={`rounded-xl overflow-hidden border border-[#e6dcc8] mb-6 max-w-md ${project.slug === 'communication-device' ? 'relative aspect-[3/2]' : ''}`}>
+                    {project.slug === 'communication-device' ? (
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="absolute object-cover"
+                        style={{ width: '66.6667%', height: '150%', left: '16.6667%', top: '-25%', transform: 'rotate(-90deg)' }}
+                      />
+                    ) : (
+                      <img src={project.image} alt={project.title} className="w-full h-auto object-cover" />
+                    )}
                   </div>
                 )}
 
