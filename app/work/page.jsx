@@ -88,7 +88,7 @@ export default function Work() {
       status: 'In Development',
       description: 'Accessible one-press messaging system for nonverbal communication',
       overview: `Developing a handheld communication device designed specifically for neurodivergent and nonverbal children. The device features simple one-press customizable messages, intuitive interface, and durable construction.`,
-      image: '/images/projects/aac-prototype.jpg',
+      image: '/images/projects/aac-prototype(1).jpg',
       highlights: [
         'User-centered design with input from FCSN and WeEMBRACE',
         'Simple one-press interface for quick communication',
