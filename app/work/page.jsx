@@ -40,7 +40,7 @@ export default function Work() {
         'Published research in IEEE: “Real-Time Control of a Low-Cost Robotic Arm Using EMG Signal Classification by AI-Based Machine Learning on Raspberry Pi” (WcCST 2026)',
         '2nd place award at Alameda County Science Fair',
         'Built a wearable EMG device (Seeed XIAO ESP32-S3, 8-channel EMG front end, 9-axis IMU) that streams muscle-activity data in real time',
-        'Collected a 5-gesture dataset (rest, fist, open hand, wrist flex, wrist extend) and trained KNN, Random Forest, and MLP classifiers',
+        'Collected a 4-gesture dataset (normal, hand lift, hand twist, and wrist lift) and trained KNN, Random Forest, and MLP classifiers',
         'Best model reached ~85% test accuracy (93% on the full dataset) at ~20 estimators, depth 5',
         'Deployed the trained model to a Raspberry Pi 4 driving a servo-actuated robotic arm in real time',
       ],
