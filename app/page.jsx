@@ -250,7 +250,8 @@ export default function Home() {
                 org: 'Co-Founder & President',
                 desc: "Co-founded a nonprofit that works toward bringing accessible technology and learning games to neurodivergent students.",
                 tags: ['Community', 'Leadership'],
-                link: 'https://rootingminds.org/',
+                link: '/activities',
+                website: 'https://rootingminds.org/',
                 size: 'big',
               },
             ].map((project, idx) => (
@@ -259,8 +260,8 @@ export default function Home() {
                 delay={idx * 100}
                 className={project.size === 'big' ? 'md:col-span-2' : 'md:col-span-1'}
               >
-                <Link href={project.link} className="block h-full">
-                  <div className={`card group cursor-pointer h-full flex flex-col ${project.size === 'big' ? 'md:flex-row md:items-center md:gap-8' : ''}`}>
+                <div className="h-full">
+                  <div className={`card group h-full flex flex-col ${project.size === 'big' ? 'md:flex-row md:items-center md:gap-8' : ''}`}>
                     <div className={project.size === 'big' ? 'md:w-1/3 flex flex-col items-start' : ''}>
                       {project.image ? (
                         <div className={`rounded-xl overflow-hidden border border-[#e6dcc8] mb-3 group-hover:scale-105 transition-transform ${project.size === 'big' ? 'w-full aspect-square' : 'w-full aspect-[3/2]'}`}>
@@ -291,12 +292,15 @@ export default function Home() {
                         ))}
                       </div>
 
-                      <div className="mt-4 flex items-center text-red-800 font-semibold group-hover:gap-2 transition-all">
-                        Discover More <span className="ml-2">→</span>
+                      <div className="mt-4 flex flex-wrap items-center gap-4 text-red-800 font-semibold">
+                        <Link href={project.link} className="hover:underline">Discover More →</Link>
+                        {project.website && (
+                          <a href={project.website} target="_blank" rel="noopener noreferrer" className="text-sm underline underline-offset-4 hover:text-red-950">Website ↗</a>
+                        )}
                       </div>
                     </div>
                   </div>
-                </Link>
+                </div>
               </Reveal>
             ))}
           </div>
