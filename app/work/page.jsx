@@ -54,7 +54,7 @@ export default function Work() {
       status: 'Electronics Trainee',
       description: 'Hands-on electronics work supporting bioscience instrumentation', // deployment refresh
       overview: `At Fluora Bioscience, I gained hands-on experience with electronics used in laboratory instrumentation, working on circuit-level problems involving LED driving, photodetector amplification, and battery-powered systems.`,
-      image: '/images/projects/fluora-bioscience-prototype.jpg',
+      image: '/images/fluora-bioscience-prototype.jpg',
       highlights: [
         'Worked on LED drive circuitry for controlled optical illumination',
         'Explored photodetector amplifier circuits for sensing low-level optical signals',
