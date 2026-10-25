@@ -25,7 +25,7 @@ const sections = [
         "title": "Academic Profile",
         "bullets": [
           "SAT: 1540 800M/740RW; PSAT: 1500/1520",
-          "GPA: 4.06/4.0 (unweighted) 4.74/5.0 (weighted) (Happy Academy Consolidated Transcript)",
+          "GPA: 4.0/4.0 (unweighted) 4.74/5.0 (weighted)",
           "National Merit Semifinalist; AP Scholar with Distinction"
         ]
       },
