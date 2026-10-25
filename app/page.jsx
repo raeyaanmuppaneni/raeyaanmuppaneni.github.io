@@ -264,7 +264,7 @@ export default function Home() {
                   <div className={`card group h-full flex flex-col ${project.size === 'big' ? 'md:flex-row md:items-center md:gap-8' : ''}`}>
                     <div className={project.size === 'big' ? 'md:w-1/3 flex flex-col items-start' : ''}>
                       {project.image ? (
-                        <div className={`rounded-xl overflow-hidden border border-[#e6dcc8] mb-3 group-hover:scale-105 transition-transform ${project.size === 'big' ? 'w-full aspect-square' : 'w-full aspect-[3/2]'}`}>
+                        <div className={`mb-3 group-hover:scale-105 transition-transform ${project.size === 'big' ? 'w-full aspect-square' : 'w-full aspect-[3/2]'} ${project.image === '/images/logos/rooting-minds.png' ? 'rounded-full overflow-hidden' : 'rounded-xl overflow-hidden border border-[#e6dcc8]'}`}>
                           <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
                         </div>
                       ) : (
