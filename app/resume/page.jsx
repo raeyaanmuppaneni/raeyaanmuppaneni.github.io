@@ -61,7 +61,7 @@ const sections = [
     "title": "RESEARCH AND ENGINEERING PROJECTS",
     "entries": [
       {
-        "title": "Pressure-Sensing Insole for Para-Athletes (Stanford SIMR and Human Performance Lab) (https://github.com/raeyaanmuppaneni/Blade-Insole)- Electrical Engineer, Team Lead",
+        "title": "Pressure-Sensing Insole for Para-Athletes (Stanford SIMR and Human Performance Lab) - Electrical Engineer, Team Lead",
         "meta": "June 2026- Present (Grade 12) ; 12hrs/wk, 25wks/yr",
         "bullets": [
           "Selected for the Stanford Institutes of Medicine Summer Research Program (SIMR) with less than 5% acceptance rate; project continues in the Stanford Human Performance Lab",
@@ -75,7 +75,7 @@ const sections = [
         ]
       },
       {
-        "title": "EMG Robotic Arm (https://github.com/raeyaanmuppaneni/EMG-controlled-robotic-arm)- Independent Researcher",
+        "title": "EMG Robotic Arm - Independent Researcher",
         "meta": "June 2024- March 2026 (Grades 10, 11) 6hrs/wk, 35wks/yr",
         "bullets": [
           "Built an EMG-controlled robotic arm for people with motor dysfunction and amputees",
@@ -253,6 +253,17 @@ const sections = [
 
 const ACCENTS = ['#8c1515', '#a0522d', '#c9a876', '#6b7c52'];
 
+const GITHUB_PROJECT_LINKS = {
+  'Pressure-Sensing Insole for Para-Athletes': {
+    label: 'GitHub page for Insole Project',
+    href: 'https://github.com/raeyaanmuppaneni/Blade-Insole',
+  },
+  'EMG Robotic Arm': {
+    label: 'GitHub page for EMG Robotic Arm',
+    href: 'https://github.com/raeyaanmuppaneni/EMG-controlled-robotic-arm',
+  },
+};
+
 function LinkedText({ text }) {
   const pieces = text.split(/(https?:\/\/[^\s)]+)/g);
   return <>{pieces.map((part, i) => /^https?:\/\//.test(part) ? <a key={i} href={part} target="_blank" rel="noopener noreferrer" className="text-red-800 underline break-all">{part}</a> : <span key={i}>{part}</span>)}</>;
@@ -282,6 +293,11 @@ export default function Resume() {
               {section.entries.map((entry, i) => (
                 <div key={i} className="mb-6 last:mb-0">
                   <h3 className="font-bold text-slate-900 mb-0.5"><LinkedText text={entry.title} /></h3>
+                  {Object.entries(GITHUB_PROJECT_LINKS).map(([project, link]) =>
+                    entry.title.startsWith(project) ? (
+                      <a key={project} href={link.href} target="_blank" rel="noopener noreferrer" className="inline-block text-sm text-red-800 underline mb-2">{link.label}</a>
+                    ) : null
+                  )}
                   {entry.meta && <p className="text-sm text-[var(--muted)] mb-2">{entry.meta}</p>}
                   {entry.body && <p className="text-sm text-slate-600 leading-relaxed"><LinkedText text={entry.body} /></p>}
                   {entry.bullets && <ul className="text-sm space-y-2 text-slate-600 mt-2">
