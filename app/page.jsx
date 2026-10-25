@@ -152,56 +152,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* ============ STANFORD RESEARCH SECTION ============ */}
-      <section className="py-24 bg-gradient-to-b from-[#fbf7ef] to-[#f3e6cd] overflow-hidden">
-        <div className="container-custom">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            {/* Photography */}
-            <Reveal className="relative order-2 md:order-1">
-              <div className="absolute -inset-6 bg-gradient-to-br from-amber-300 via-orange-200 to-transparent rounded-3xl opacity-40 blur-2xl"></div>
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-amber-200/60">
-                <img
-                  src="/images/stanford/hoover-tower.jpg"
-                  alt="Hoover Tower and the Main Quad at Stanford University"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-              {/* Small detail shot overlapping the corner */}
-              <div className="hidden md:block absolute -bottom-8 -right-8 w-40 h-32 rounded-xl overflow-hidden shadow-2xl border-4 border-[#fbf7ef]">
-                <img
-                  src="/images/stanford/colonnade.jpg"
-                  alt="Stanford Main Quad colonnade"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <p className="text-center text-xs text-slate-400 mt-3 italic">
-                Hoover Tower &amp; the Main Quad, Stanford University
-              </p>
-            </Reveal>
-
-            {/* Text */}
-            <Reveal delay={150} className="order-1 md:order-2 space-y-6">
-              <h2 className="heading-lg">My Summer at Stanford SIMR</h2>
-              <p className="prose text-lg">
-                This past summer, my team and I started building a smart insole through Stanford's <span className="font-bold text-slate-900">SIMR program</span>, a summer research program for high school students. The insole measures foot pressure as someone walks or runs.
-              </p>
-              <p className="prose">
-                It began with an interview with a para-athlete, who told us even Stanford's lab equipment can't be used by blade runners. We built an insole with eight capacitive pressure sensors to fill that gap. After SIMR ended, my team and I continued the project under the mentorship of a PhD student in the Human Performance Lab. Since then, we've redesigned the circuit boards and got the full system running. Next is calibration and lab testing.
-              </p>
-              <div className="flex gap-2 md:gap-3 flex-wrap pt-2">
-                <span className="bg-[#8c1515] text-white rounded-full px-3 py-1.5 md:px-5 md:py-2 text-[0.65rem] md:text-xs font-semibold whitespace-nowrap">Stanford SIMR 2026 · Continuing Research</span>
-                <span className="text-[0.65rem] md:text-xs px-3 py-1.5 md:px-4 md:py-2 rounded-full border border-amber-300 text-amber-700 font-semibold whitespace-nowrap">
-                  Human Performance Lab
-                </span>
-              </div>
-              <Link href="/work" className="inline-flex items-center gap-2 font-semibold text-red-800 pt-2">
-                See the research in detail <span>→</span>
-              </Link>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
       {/* ============ FEATURED WORK SECTION ============ */}
       <section className="py-24 bg-gradient-to-b from-[#f4ecda] to-[#fbf7ef]">
         <div className="container-custom">
