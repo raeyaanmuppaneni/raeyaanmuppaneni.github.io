@@ -73,7 +73,7 @@ export default function Home() {
               <span className="font-serif font-bold text-sm md:text-base text-[#3d362c]">Stanford SIMR · HPL Mentorship</span>
               <span className="font-serif font-bold text-sm md:text-base text-[#3d362c]">Synopsys Science Fair</span>
               <span className="font-serif font-bold text-sm md:text-base text-[#3d362c]">Conrad Challenge</span>
-              <span className="font-serif font-bold text-sm md:text-base text-[#3d362c]">Rooting Minds</span>
+              <a href="https://rootingminds.org/" target="_blank" rel="noopener noreferrer" className="font-serif font-bold text-sm md:text-base text-[#3d362c] hover:underline">Rooting Minds</a>
             </div>
           </div>
         </div>
@@ -250,7 +250,7 @@ export default function Home() {
                 org: 'Co-Founder & President',
                 desc: "Co-founded a nonprofit that works toward bringing accessible technology and learning games to neurodivergent students.",
                 tags: ['Community', 'Leadership'],
-                link: '/activities',
+                link: 'https://rootingminds.org/',
                 size: 'big',
               },
             ].map((project, idx) => (
