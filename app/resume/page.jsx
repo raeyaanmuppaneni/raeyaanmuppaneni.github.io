@@ -31,7 +31,7 @@ const sections = [
       },
       {
         "title": "AP (Scores) and HONORS Courses",
-        "body": "AP US Government and Politics (5), AP Computer Science Principles (5), AP Physics I (5), AP Calculus AB (5), AP Macroeconomics (5), AP World History (4), AP English Language and Composition (4), AP Calculus BC (5), AP Computer Science A (5), AP Physics C: Mechanics (5), AP Physics C: Electricity & Magnetism (4), AP Psychology (in progress), AP Environmental Science (in progress), AP Statistics (in progress), AP Chemistry (course only), AP Seminar (course only), AP Research (course only), AP Spanish (in progress, course only), Chemistry Honors, English 10 Honors, Precalculus AB"
+        "body": "AP US Government and Politics (5), AP Computer Science Principles (5), AP Physics I (5), AP Calculus AB (5), AP Macroeconomics (5), AP World History (4), AP English Language and Composition (4), AP Calculus BC (5), AP Computer Science A (5), AP Physics C: Mechanics (5), AP Physics C: Electricity & Magnetism (4), AP Psychology, AP Environmental Science, AP Statistics, AP Chemistry, AP Seminar, AP Research, AP Spanish, Chemistry Honors, English 10 Honors, Precalculus AB"
       },
       {
         "title": "Additional Coursework",
