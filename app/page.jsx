@@ -22,7 +22,7 @@ export default function Home() {
               {/* Trust badges row */}
               <div className="flex items-center gap-3 flex-wrap">
                 <div className="flex items-center gap-1.5 bg-[#fffdf8] border border-[#e6dcc8] rounded-full px-3 py-1.5 shadow-sm">
-                  <span className="text-xs font-bold text-[#2b2620]">Weighted GPA · 4.71</span>
+                  <span className="text-xs font-bold text-[#2b2620]">Weighted GPA · 4.74</span>
                 </div>
                 <div className="flex items-center gap-1.5 bg-[#fffdf8] border border-[#e6dcc8] rounded-full px-3 py-1.5 shadow-sm">
                   <span className="text-xs font-bold text-[#8c1515]">Stanford SIMR</span>
@@ -136,7 +136,7 @@ export default function Home() {
 
                 <div className="grid grid-cols-2 gap-4">
                   {[
-                    { label: 'Weighted GPA', value: '4.71' },
+                    { label: 'Weighted GPA', value: '4.74' },
                     { label: 'Research', value: 'Biomedical Engineering' },
                     { label: 'Focus', value: 'Electrical Engineering' },
                     { label: 'Mission', value: 'Closing gaps' },
