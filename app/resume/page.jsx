@@ -275,7 +275,6 @@ export default function Resume() {
       <section className="relative overflow-hidden pt-16 pb-14 md:pt-20 md:pb-16 border-b border-[#e6dcc8]">
         <div className="container-custom flex flex-wrap justify-between items-end gap-6">
           <div>
-            <p className="calligraphy text-2xl mb-2">The Paper Trail</p>
             <h1 className="heading-lg mb-3" style={{ color: 'var(--primary)' }}>Resume</h1>
             <p className="text-[var(--muted)]">raeyaanmuppaneni@gmail.com · Fremont, California</p>
           </div>
