@@ -38,7 +38,6 @@ export default function Activities() {
       <PageHero
         eyebrow="Outside the Lab"
         title="Activities & Leadership"
-        subtitle="Engineering is most of what I do, but not all of it — here's the rest of the picture."
       />
 
       <div className="container-custom py-16 md:py-20">
