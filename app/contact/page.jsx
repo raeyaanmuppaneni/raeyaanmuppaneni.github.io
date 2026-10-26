@@ -38,7 +38,6 @@ export default function Contact() {
   return (
     <div className="bg-[#fbf7ef] min-h-screen">
       <PageHero
-        eyebrow="Let's Talk"
         title="Get in Touch"
         subtitle="I'm always interested in hearing about new ideas, research opportunities, and collaborations. Reach out any way that's easiest."
       />
