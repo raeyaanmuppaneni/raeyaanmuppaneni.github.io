@@ -33,7 +33,7 @@ export default function Home() {
               <div>
                 <p className="calligraphy text-3xl mb-2">Hey, I'm Raeyaan</p>
                 <h1 className="heading-display leading-tight mb-6">
-                  The World Wasn't Built<br className="hidden md:block" /> for Everyone. So I'm<br className="hidden md:block" /> Building What It Left Out.
+                  I Like Building Things<br className="hidden md:block" /> That Solve Real Problems.
                 </h1>
               </div>
 
