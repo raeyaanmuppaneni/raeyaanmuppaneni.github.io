@@ -158,9 +158,6 @@ export default function Home() {
           <Reveal>
             <div className="text-center mb-16">
               <h2 className="heading-lg mb-4">What I've Built</h2>
-              <p className="prose text-lg max-w-2xl mx-auto">
-                Every one of these started as "wait, what if..." — here's where that curiosity led.
-              </p>
             </div>
           </Reveal>
 
