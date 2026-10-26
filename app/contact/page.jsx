@@ -39,7 +39,6 @@ export default function Contact() {
     <div className="bg-[#fbf7ef] min-h-screen">
       <PageHero
         title="Get in Touch"
-        subtitle="I'm always interested in hearing about new ideas, research opportunities, and collaborations. Reach out any way that's easiest."
       />
 
       <div className="container-custom py-16 md:py-20">
